@@ -14,12 +14,12 @@
                 <div class="profile">
                     <a href="#"><i class="fas fa-shopping-cart"></i></a>
                     <a href="#">Order Online</a>
-                    {# {% if app.user %}
+                    {% if app.user %}
                         <img src="{{ asset('images/avatar.jpg') }}" alt="avatar" class="avatar">
-                    {% else %} #}
-                        {# <a class="btn btn-primary" href="{{ path('app_register') }}">S'Inscrire</a>
-                        <a class="btn btn-primary" href="{{ path('app_login') }}">Se Connecter</a> #}
-                    {# {% endif %} #}
+                    {% else %}
+                        <a class="btn btn-primary" href="{{ path('app_register') }}">S'Inscrire</a>
+                        <a class="btn btn-primary" href="{{ path('app_login') }}">Se Connecter</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
