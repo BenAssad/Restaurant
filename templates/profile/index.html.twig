@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProfileController!{% endblock %}
+
+{% block body %}
+    <div>
+        <div>
+            <ul>
+                <li>Nom : {{ app.user.name }}</li>
+                <li>Prénom : {{ app.user.lastname }}</li>
+                <li>Email : {{ app.user.email }}</li>
+                <li>Date de naissance : {{ app.user.birthAt|date('j-m-Y') }}</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <a class="btn btn-success" href="{{ path('app_profile_edit', {id: app.user.id}) }}">Modifier Profil</a>
+        </div>
+    </div>
+{% endblock %}

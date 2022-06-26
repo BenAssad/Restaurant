@@ -10,12 +10,10 @@
     align-items: center;
     justify-content: center;
     height: 700px;
-    /* margin-top: 20px; */
 }
-.form{
-    width: 100%;
-}
+
 .f1{
     display: flex;
-    justify-content: space-between;
+    padding: 5px;
 }
+
