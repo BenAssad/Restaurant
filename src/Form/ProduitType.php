@@ -39,7 +39,7 @@ class ProduitType extends AbstractType
                     ]);
             }elseif ($options['imageUpdate']) {
                 $builder
-                    ->add('image', FileType::class, [
+                    ->add('imageUpdate', FileType::class, [
                         'required' => false,
                         'mapped' => false,
                         'attr' => [
@@ -53,7 +53,8 @@ class ProduitType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Produit::class,
-            'image' => false
+            'image' => false,
+            'imageUpdate' => false
         ]);
     }
 }

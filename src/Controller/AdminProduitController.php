@@ -74,11 +74,27 @@ class AdminProduitController extends AbstractController
      */
     public function edit(Request $request, Produit $produit, ProduitRepository $produitRepository): Response
     {
-        $form = $this->createForm(ProduitType::class, $produit);
+        $form = $this->createForm(ProduitType::class, $produit, ["imageUpdate" => true]);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $produitRepository->add($produit, true);
+            
+            $image = $form->get('imageUpdate')->getData();
+            if ($image) 
+            {
+                $nameImage = date('') . "-" . uniqid(). "." . $image->getClientOriginalExtension();
+                $image->move(
+                    $this->getParameter('imageProduit'),
+                    $nameImage
+                );
+                $produit->setImage($nameImage);
+            }
+
+            if($produit->getImage())
+                {
+                    unlink($this->getParameter('imageProduit') . "/" . $produit->getImage() );
+                }
 
             return $this->redirectToRoute('app_admin_produit_index', [], Response::HTTP_SEE_OTHER);
         }
