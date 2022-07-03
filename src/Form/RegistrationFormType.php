@@ -23,57 +23,36 @@ class RegistrationFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-        if ($options['profile']) {
-            $builder
-            ->add('name', TextType::class, [
-                "required" => false,
-                'label' => 'Nom'
-            ])
-            ->add('lastname', TextType::class, [
-                "required" => false,
-                'label' => 'Prénom'
-            ])
-            ->add('email', EmailType::class, [
-                "required" => false
-            ])
-            ->add('birthAt', DateType::class, [
-                "required" => false,
-                // "widget" => "choice",
-                "widget" => "single_text",
-                // 'input'  => 'datetime_immutable',
-                'label' => 'Date de naissance',
-                "attr" => [
-                    "placeholder" => "Date de naissance",
-                    // "placeholder" => "Select a value",
-                ]
-            ])
-            ->add('phoneNumber', NumberType::class,[
-                "required" => false,
-                'label' => 'Téléphone'
-            ])
-            ;
-        }
-        if ($options["avatar"]) 
-            {
-                $builder->add('avatar', FileType::class, [
-                    "label" => "Photo de profile",
-                    'required' => false,
-                    "data_class" => null,
-                    'attr' => [
-                        'onchange' => 'loadFile(event)'
-                    ]
-                ]);
-            }elseif ($options['avatarEdit']) 
-            {
-                $builder->add('avatatUpdate', FileType::class, [
-                    "label" => "Photo de profile",
+         $builder
+                ->add('name', TextType::class, [
                     "required" => false,
-                    "mapped" => false,
-                    'attr' => [
-                        'onchange' => 'loadFile(event)'
+                    'label' => 'Nom'
+                ])
+                ->add('lastname', TextType::class, [
+                    "required" => false,
+                    'label' => 'Prénom'
+                ])
+                ->add('email', EmailType::class, [
+                    "required" => false
+                ])
+                ->add('birthAt', DateType::class, [
+                    "required" => false,
+                    // "widget" => "choice",
+                    "widget" => "single_text",
+                    // 'input'  => 'datetime_immutable',
+                    'label' => 'Date de naissance',
+                    "attr" => [
+                        "placeholder" => "Date de naissance",
+                        // "placeholder" => "Select a value",
                     ]
-                ]);
-            }
+                ])
+                ->add('phoneNumber', NumberType::class,[
+                    "required" => false,
+                    'label' => 'Téléphone'
+                ])
+                ;
+
+       
         if ($options["accepter"]) 
         {
                 $builder->add('accepter', CheckboxType::class, [
@@ -128,7 +107,6 @@ class RegistrationFormType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => User::class,
-            "profile" => false,
             "avatar" => false,
             "accepter" => false,
             "password" => false,

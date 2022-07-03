@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Form\RegistrationFormType;
+use App\Form\UserType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -26,7 +26,7 @@ class ProfileController extends AbstractController
     public function editProfil(Request $request, EntityManagerInterface $manager): Response
     {
         $user = $this->getUser();
-        $form =$this->createForm(RegistrationFormType::class, $user, ["profile" => true, "sub" => true, "avatar" => true]);
+        $form =$this->createForm(UserType::class, $user, ["avatar" => true, "sub" => true]);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) 
         {

@@ -5,8 +5,8 @@
                 <a href=""><img class="log" src="{{ asset('images/logo.png') }}" alt="logo"></a>
             </div>
             <div class="right">
-                <a href="">HOME</a>
-                <a href="">MENU</a>
+                <a href="#">HOME</a>
+                <a href="{{ path('app_afficher') }}">MENU</a>
                 <a href="">ABOUT</a>
                 <a href="">BOOK TABLE</a>
             </div>
@@ -15,10 +15,12 @@
                     <a href="#"><i class="fas fa-shopping-cart"></i></a>
                     <a href="#">Order Online</a>
                     {% if app.user %}
-
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <a href="{{ path('app_admin_produit_index') }}" class="btn btn-primary">Back Office</a>
+                        {% endif %}
+                        <a class="btn btn-primary" href="{{ path('app_logout') }}">Se Déconnecter</a>
                         {% if app.user.avatar %}
-                            <img id="avatar" src="{{ asset('images/avatar/' ~ app.user.avatar) }}" alt="avatar" class="avatar" aria-expanded="false">
-                            <a class="btn btn-primary" href="{{ path('app_logout') }}">Se Déconnecter</a>
+                            <a href="{{ path('app_profile') }}"><img id="avatar" src="{{ asset('images/avatar/' ~ app.user.avatar) }}" alt="avatar" class="avatar" aria-expanded="false"></a>
                         {% else %}
                             <img id="avatar" src="{{ asset('images/avatar.png') }}" alt="avatar" aria-expanded="false">
                             <a href="{{ path('app_profile') }}"><img src="{{ asset('images/avatar.jpg') }}" alt="avatar" class="avatar"></a>
