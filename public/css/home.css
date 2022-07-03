@@ -1,0 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#home{
+    border: 2px solid rgb(208, 195, 19);
+    /* width: 100%;
+    height: 100px; */
+    background-image: url('images/home.jpg');
+}
