@@ -4,8 +4,34 @@
     box-sizing: border-box;
 }
 #home{
-    border: 2px solid rgb(208, 195, 19);
-    /* width: 100%;
-    height: 100px; */
-    background-image: url('images/home.jpg');
+    width: 100%;
+    height: 750px;
+    background-image: url("../images/home.jpg");
+    background-size: cover;
+    background-position: center center;
 }
+#rectangle{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: space-around;
+}
+.rec1{
+    background-color: rgb(34, 40, 49);
+    border-radius: 10px;
+    width: 35%;
+    height: 220px;
+    margin: auto;
+}
+.recimg{
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+}
+.img{
+    display: flex;
+    justify-content: space-around;
+    color: aliceblue;
+    margin: auto;
+}
+
