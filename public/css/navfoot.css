@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 body{
-    position: relative;
-    height: 2500px;
+    /* position: relative;
+    height: 2500px; */
 }
 /* nav-barre */
 #menu{
@@ -49,8 +49,8 @@ a{
 footer{
     border: 2px solid red;
     background-color: rgb(34, 40, 49);
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
     height: 400px;
     width: 100%;
     color: white;
