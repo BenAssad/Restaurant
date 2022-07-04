@@ -1,19 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProduitController!{% endblock %}
+{% block title %}Menu{% endblock %}
 
 {% block body %}
 <div class="example-wrapper">
     <h1></h1>
      <div id="">
         <h1>Nos Menu</h1>
-        <ul>
-            <li>All</li>
-            <li>Burger</li>
-            <li>Pizza</li>
-            <li>Pizza</li>
-        </ul>
-     
+        <div id="ul">
+            <ul>
+                <li>All</li>
+                <li>Burger</li>
+                <li>Pizza</li>
+                <li>Pizza</li>
+            </ul>
+        </div>
     </div>
     <div class="">
         {% for produit in produits %}
@@ -23,9 +24,14 @@
             {% if produit.image %}
                 <img src="{{ asset(  'images/produit/' ~ produit.image    ) }}" alt="" class="img80">
             {% else %}
-                pas d'image
+                {# <img src="{{ asset(  'images/produit/' ~ produit.image    ) }}" alt="" class="img80"> #}
             {% endif %}
         {% endfor %}
     </div>
 </div>
+
+
+
+
+
 {% endblock %}

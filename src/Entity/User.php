@@ -66,22 +66,22 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $avatar;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $address;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $codePostale;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $ville;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $region;
 
@@ -251,7 +251,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->address;
     }
 
-    public function setAddress(string $address): self
+    public function setAddress(?string $address): self
     {
         $this->address = $address;
 
@@ -263,7 +263,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->codePostale;
     }
 
-    public function setCodePostale(int $codePostale): self
+    public function setCodePostale(?int $codePostale): self
     {
         $this->codePostale = $codePostale;
 
@@ -275,7 +275,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->ville;
     }
 
-    public function setVille(string $ville): self
+    public function setVille(?string $ville): self
     {
         $this->ville = $ville;
 
@@ -287,7 +287,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->region;
     }
 
-    public function setRegion(string $region): self
+    public function setRegion(?string $region): self
     {
         $this->region = $region;
 
