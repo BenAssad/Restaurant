@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Produit;
 use App\Form\ProduitType;
 use App\Repository\ProduitRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -28,7 +29,7 @@ class AdminProduitController extends AbstractController
     /**
      * @Route("/new", name="app_admin_produit_new", methods={"GET", "POST"})
      */
-    public function new(Request $request, ProduitRepository $produitRepository): Response
+    public function new(Request $request, ProduitRepository $produitRepository, EntityManagerInterface $manager): Response
     {
         $produit = new Produit();
         $form = $this->createForm(ProduitType::class, $produit, ["image" => true]);
@@ -42,12 +43,17 @@ class AdminProduitController extends AbstractController
             $image = $form->get('image')->getData();
             if ($image) 
             {
-                $nameImage = date('') . "-" . uniqid(). "." . $image->getClientOriginalExtension();
+                $nameImage =  date('YmdHis') . "-" . uniqid() . "." . $image->getClientOriginalExtension();
+          
                 $image->move(
                     $this->getParameter('imageProduit'),
                     $nameImage
                 );
                 $produit->setImage($nameImage);
+                $manager->persist($produit);
+                $manager->flush();
+
+
             }
 
             return $this->redirectToRoute('app_admin_produit_index', [], Response::HTTP_SEE_OTHER);
@@ -72,7 +78,7 @@ class AdminProduitController extends AbstractController
     /**
      * @Route("/{id}/edit", name="app_admin_produit_edit", methods={"GET", "POST"})
      */
-    public function edit(Request $request, Produit $produit, ProduitRepository $produitRepository): Response
+    public function edit(Request $request, Produit $produit, ProduitRepository $produitRepository, EntityManagerInterface $manager): Response
     {
         $form = $this->createForm(ProduitType::class, $produit, ["imageUpdate" => true]);
         $form->handleRequest($request);
@@ -89,6 +95,9 @@ class AdminProduitController extends AbstractController
                     $nameImage
                 );
                 $produit->setImage($nameImage);
+
+                $manager->persist($produit);
+                $manager->flush();
             }
 
             if($produit->getImage())
