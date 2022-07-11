@@ -9,6 +9,7 @@
     background-image: url("../images/home.jpg");
     background-size: cover;
     background-position: center center;
+     font-family: 'Dancing Script', cursive;
 }
 #rectangle{
     /* border: 2px solid rgb(85, 0, 255); */
@@ -16,6 +17,7 @@
     height: 400px;
     display: flex;
     justify-content: center;
+     font-family: 'Dancing Script', cursive;
 }
 .rectangle1{
     width: 80%;
