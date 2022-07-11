@@ -4,9 +4,8 @@
 
 {% block body %}
 <div class="example-wrapper">
-    <h1></h1>
      <div id="">
-        <h1>Notre Menu</h1>
+        <h1 class="h1">Notre Menu</h1>
         <div id="ul">
             <ul>
                 <li>All</li>
@@ -16,31 +15,32 @@
             </ul>
         </div>
     </div>
-    
-    <div id="grid">
-        {% for produit in produits %}
-        <div class="grid1">
-         <div class="ig">
-            {% if produit.image %} 
-                <img src="{{ asset(  'images/produit/' ~ produit.image    ) }}" class="recimg">
-            {% else %}
-                <img src="{{ asset(  'images/home.jpg'   ) }}" class="recimg0">
-            {% endif %}
-         </div>
-         <div class="grig2">
-            <div class="">
-            <h2>{{ produit.titre }}</h2>
-            <p>{{ produit.description }}</p>
-            </div>
-            <div class="pan">
-               <p>$ {{ produit.prix }}</p>
-               <p>panier</p>
-            </div>
-         </div>
-      </div>
-      {% endfor %}
-   </div>
+    <div id="gridmenu">
 
+        <div id="grid">
+            {% for produit in produits %}
+            <div class="grid1">
+                <div class="ig">
+                    {% if produit.image %} 
+                        <img src="{{ asset(  'images/produit/' ~ produit.image    ) }}" id="recim">
+                    {% else %}
+                        <img src="{{ asset(  'images/home.jpg'   ) }}" class="recimg0">
+                    {% endif %}
+                </div>
+            <div class="grig2">
+                <div class="">
+                    <h2>{{ produit.titre }}</h2>
+                    <p>{{ produit.description }}</p>
+                </div>
+                <div class="pan">
+                    <p>$ {{ produit.prix }}</p>
+                    <a href="#"><i data-feather="shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
 </div>
 
    

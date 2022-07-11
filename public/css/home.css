@@ -48,6 +48,13 @@
     height: 200px;
     padding: 0;
 }
+#recim{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    transition: 3s;
+}
 .text{
     margin-left: 10px;
 }
@@ -55,10 +62,9 @@
 /** grid **/
 #grid{
     width: 100%;
-    height: 550px;
-    width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .grid1{
     /* border: 5px solid red; */
