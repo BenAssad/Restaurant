@@ -13,23 +13,33 @@
     height: 700px;
 }
 .registre{
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: 2px solid gray;
     background-color: rgb(34, 40, 49);
     color: aliceblue;
-    width: 50%;
+    width: 35%;
 }
-.regi{
-    border: 3px solid yellow;
-    width: 60%;
-}
+
 .f2{
     width: 95%;
     margin-left: 10px;
 }
 .f1{
     display: flex;
-    justify-content: space-between;
-    padding: 5px;
+    justify-content: space-around;
+    width: 500px;
+    margin-left: 5px;
+}
+.ins{
+    margin-bottom: 20px;
+}
+.date{
+    width: 95%;
+    margin-left: 10px;
 }
 /* page de connection */
 .connection{
@@ -60,7 +70,7 @@
 .btn{
     background-color: #E69C00;
     margin: 20px;
-    margin-left: 5px;
+    margin-left: 30px;
     text-align: center;
 }
 .btn:hover{

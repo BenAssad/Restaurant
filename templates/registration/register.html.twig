@@ -5,7 +5,7 @@
 {% block body %}
 <div id="form">
     <div class="registre">
-        <h1>Inscription</h1>
+        <h1 class="ins">Inscription</h1>
         {{ form_start(registrationForm) }}
         <div class="regi">
             <div class="f1">
@@ -16,7 +16,9 @@
                 {{ form_row(registrationForm.email) }}
                 {{ form_row(registrationForm.phoneNumber) }}
             </div>
+            <div class="date">
                 {{ form_row(registrationForm.birthAt) }}
+            </div>
             <div class="f1">
                 {{ form_row(registrationForm.plainPassword, {
                     label: 'Password'
