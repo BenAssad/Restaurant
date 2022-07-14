@@ -2,8 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\ProduitRepository;
+use App\Entity\Categorie;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProduitRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass=ProduitRepository::class)
@@ -41,6 +44,17 @@ class Produit
      * @ORM\Column(type="datetime_immutable")
      */
     private $createdAt;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Categorie::class, inversedBy="produits")
+     */
+    private $categorie;
+
+ 
+
+
+
+    
 
     public function __construct()
     {
@@ -111,4 +125,17 @@ class Produit
 
         return $this;
     }
+
+    public function getCategorie(): ?Categorie
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(?Categorie $categorie): self
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+    
 }

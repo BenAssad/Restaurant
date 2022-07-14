@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: aliceblue;
+    /* color: aliceblue; */
 }
 .diaporama{
     position: relative;
@@ -89,7 +89,6 @@
     margin: 20px;
 }
 .recimg{
-    border: 5px solid yellow;
     border-radius: 50%;
     width: 200px;
     height: 200px;
@@ -121,6 +120,10 @@
     border-radius: 20px;
     color: aliceblue;
     margin: 20px;
+}
+.img{
+    border: 5px solid yellow;
+    border-radius: 50%;
 }
 .ig{
     /* border: 5px solid rgb(98, 0, 255); */
@@ -159,5 +162,13 @@
 .back1{
     width: 50%;
 }
-
+/* button */
+.button{
+    background-color: rgb(255, 190, 51);
+    border-radius: 50px;
+    text-decoration: none;
+    height: 60px;
+    width: 200px;
+    font-family: 'Roboto', sans-serif;
+}
 

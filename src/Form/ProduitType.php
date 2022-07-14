@@ -2,7 +2,9 @@
 
 namespace App\Form;
 
+use App\Entity\Categorie;
 use App\Entity\Produit;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
@@ -27,6 +29,12 @@ class ProduitType extends AbstractType
                 'currency' => 'euro',
                 'required' => false,
                 'label' => 'Prix'
+            ])
+            ->add('categorie', EntityType::class, [
+                "class" => Categorie::class ,
+                'choice_label' => 'name',
+                'placeholder' => 'Veuillez Saisir la Categorie',
+                'required' => false
             ])
             ;
             if ($options['image']) {
