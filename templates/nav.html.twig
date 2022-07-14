@@ -16,9 +16,9 @@
                     <a href="#">Order Online</a>
                     {% if app.user %}
                         {% if is_granted('ROLE_ADMIN') %}
-                            <a href="{{ path('app_admin_produit_index') }}" class="btn btn-primary">Back Office</a>
+                            <a href="{{ path('app_admin_produit_index') }}" class="btn">Back Office</a>
                         {% endif %}
-                        <a class="btn btn-primary" href="{{ path('app_logout') }}">Se Déconnecter</a>
+                        <a class="btn" href="{{ path('app_logout') }}">Se Déconnecter</a>
                         {% if app.user.avatar %}
                             <a href="{{ path('app_profile') }}"><img id="avatar" src="{{ asset('images/avatar/' ~ app.user.avatar) }}" alt="avatar" class="avatar" aria-expanded="false"></a>
                         {% else %}
@@ -27,8 +27,8 @@
                         {% endif %}
 
                     {% else %}
-                        <a class="btn btn-primary" href="{{ path('app_register') }}">S'Inscrire</a>
-                        <a class="btn btn-primary" href="{{ path('app_login') }}">Se Connecter</a>
+                        <a class="btn" href="{{ path('app_register') }}">S'Inscrire</a>
+                        <a class="btn" href="{{ path('app_login') }}">Se Connecter</a>
                     {% endif %}
                 </div>
             </div>

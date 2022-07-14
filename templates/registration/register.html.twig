@@ -4,26 +4,28 @@
 
 {% block body %}
 <div id="form">
-    <h1>Inscription</h1>
-    {{ form_start(registrationForm) }}
-    <div class="form">
-        <div class="f1">
-            <p>{{ form_row(registrationForm.name) }}</p>
-            <p>{{ form_row(registrationForm.lastname) }}</p>
+    <div class="registre">
+        <h1>Inscription</h1>
+        {{ form_start(registrationForm) }}
+        <div class="regi">
+            <div class="f1">
+                <p>{{ form_row(registrationForm.name) }}</p>
+                <p>{{ form_row(registrationForm.lastname) }}</p>
+            </div>
+            <div class="f2">
+                {{ form_row(registrationForm.email) }}
+                {{ form_row(registrationForm.phoneNumber) }}
+            </div>
+                {{ form_row(registrationForm.birthAt) }}
+            <div class="f1">
+                {{ form_row(registrationForm.plainPassword, {
+                    label: 'Password'
+                }) }}
+            </div>
         </div>
-        <div class="f2">
-            {{ form_row(registrationForm.email) }}
-            {{ form_row(registrationForm.phoneNumber) }}
-        </div>
-            {{ form_row(registrationForm.birthAt) }}
-        <div class="f1">
-            {{ form_row(registrationForm.plainPassword, {
-                label: 'Password'
-            }) }}
-        </div>
+            {{ form_row(registrationForm.accepter) }}
+            <button type="submit" class="btn">S'Inscrire</button>
+        {{ form_end(registrationForm) }}
     </div>
-        {{ form_row(registrationForm.accepter) }}
-        <button type="submit" class="btn">S'Inscrire</button>
-    {{ form_end(registrationForm) }}
 </div>
 {% endblock %}

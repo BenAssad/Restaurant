@@ -3,24 +3,67 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* page d'inscription */
 #form{
+    border: 2px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 700px;
 }
-
+.registre{
+    border: 2px solid gray;
+    background-color: rgb(34, 40, 49);
+    color: aliceblue;
+    width: 50%;
+}
+.regi{
+    border: 3px solid yellow;
+    width: 60%;
+}
+.f2{
+    width: 95%;
+    margin-left: 10px;
+}
 .f1{
     display: flex;
+    justify-content: space-between;
     padding: 5px;
 }
 /* page de connection */
 .connection{
-    border: 2px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 700px;
 }
-
+.connecter{
+    background-color: rgb(34, 40, 49);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: aliceblue;
+    width: 40%;
+    height: 500px;
+    border-radius: 30px;
+}
+.connecte{
+    width: 30%;
+    height: 200px;
+}
+.h3{
+    margin-bottom: 40px;
+    height: 90px;
+}
+.btn{
+    background-color: #E69C00;
+    margin: 20px;
+    margin-left: 5px;
+    text-align: center;
+}
+.btn:hover{
+    background-color: #E69C00;
+    color: aliceblue;
+}
