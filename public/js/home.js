@@ -83,3 +83,23 @@ function stopTimer(){
 function startTimer(){
     timer = setInterval(slideNext, 4000)
 }
+
+
+// Zoom images
+const rec = document.getElementsByClassName("rec1");
+const img = document.getElementsByClassName("recimg");
+
+for(let i = 0; i < rec.length; i++){
+
+    rec[i].addEventListener("mouseover", function(){
+        img[i].style.height = "100%";
+        img[i].style.width = "100%";
+    });
+}
+for(let i = 0; i < rec.length; i++){
+
+    rec[i].addEventListener("mouseout", function(){
+        img[i].style.height = "95%";
+        img[i].style.width = "95%";
+    });
+}

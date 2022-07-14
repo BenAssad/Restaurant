@@ -12,7 +12,8 @@
                 <div class="caption">
                     <h2>Image 2</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, saepe.</p>
-                    <button class="button"><a href="#">Order Now</a></button>
+                    <a class="button" href="#">Order Now</a>
+
                 </div>
             </div>
             <!-- Troisième diapo -->
@@ -20,7 +21,7 @@
                 <div class="caption">
                     <h2>Image 3</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, saepe.</p>
-                    <button class="button"><a href="#">Order Now</a></button>
+                    <a class="button" href="#">Order Now</a>
                 </div>
             </div>
             <!-- Quatrième diapo -->
@@ -28,7 +29,7 @@
                 <div class="caption">
                     <h2>Image 4</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, saepe.</p>
-                    <button class="button"><a href="#">Order Now</a></button>
+                    <a class="button" href="#">Order Now</a>
                 </div>
             </div>
         </div>
@@ -42,31 +43,33 @@
 
 
    <div id="rectangle">
+
       <div class="rectangle1">
-           <div class="rec1">
-         <div class="rec2">
+         <div class="rec1">
+            <div class="rec2">
             <div class="img">
-               <img class="recimg" src="{{ asset('images/rec1.jpg') }}" alt="">  
+                  <img class="recimg" id="recimg" src="{{ asset('images/rec1.jpg') }}" alt="">  
             </div>
-            <div class="text">
-               <p>Tasty Thursdays</p>
-               <p>20% off</p>
-               <button>Order</button>
+               <div class="text">
+                     <p>Tasty Thursdays</p>
+                     <p>20% off</p>
+                     <button>Order</button>
+               </div>
             </div>
          </div>
-      </div>
-      <div class="rec1">
-         <div class="rec2">
-            <div class="img">
-               <img class="recimg" src="{{ asset('images/rec1.jpg') }}" alt="">  
+
+         <div class="rec1">
+            <div class="rec2">
+               <div class="img">
+                  <img class="recimg" id="recimg" src="{{ asset('images/rec1.jpg') }}" alt="">  
             </div>
-            <div class="text">
-               <p>Tasty Thursdays</p>
-               <p>20% off</p>
-               <button>Order</button>
+               <div class="text">
+                  <p>Tasty Thursdays</p>
+                  <p>20% off</p>
+                  <button>Order</button>
+               </div>
             </div>
          </div>
-      </div>
       </div>
    </div>
 
