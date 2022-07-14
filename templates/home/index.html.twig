@@ -3,9 +3,41 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-   <div id="home">
-        <h1>home</h1>  
+   <div class="diaporama">
+        <!-- Conteneur des "diapos" -->
+        <div class="elements">
+            <!-- Deuxième diapo -->
+            <div class="element">
+                {# <img src="brochette.jpg" alt="Image 2"> #}
+                <div class="caption">
+                    <h2>Image 2</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, saepe.</p>
+                </div>
+            </div>
+            <!-- Troisième diapo -->
+            <div class="element">
+                <div class="caption">
+                    <h2>Image 3</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, saepe.</p>
+                </div>
+            </div>
+            <!-- Quatrième diapo -->
+            <div class="element">
+                <div class="caption">
+                    <h2>Image 4</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, saepe.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flèches de navigation -->
+        <i id="nav-gauche" data-feather="arrow-left-circle"></i>
+        <i id="nav-droite" data-feather="arrow-right-circle"></i>
+        
    </div>
+
+
+
+
    <div id="rectangle">
       <div class="rectangle1">
            <div class="rec1">
