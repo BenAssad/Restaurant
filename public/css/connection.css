@@ -60,7 +60,7 @@
     flex-direction: column;
     color: aliceblue;
     width: 40%;
-    height: 500px;
+    height: 600px;
     border-radius: 30px;
 }
 .connecte{
@@ -93,4 +93,13 @@
 }
 .cart:hover{
     color: aliceblue;
+}
+.oublier{
+    margin: 20px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+.oub:hover{
+    color: #E69C00;
 }
