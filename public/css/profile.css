@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.profil{
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.prof{
+    border: 2px solid yellow;
+    background-color: rgb(34, 40, 49);
+    color: aliceblue;
+    height: 550px;
+    width: 40%;
+    border-radius: 20px;
+}
+ul{
+    list-style: none;
+}
+li{
+    margin: 20px;
+}
+.ava{
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgprofile{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.imagep{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user{
+
+}
+.changeprofile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -26,12 +26,13 @@
     display: flex;
     justify-content: space-between;
 }
+
 .profile{
     background-color: hsl(34, 40, 49);
     width: 450px;
     height: 80px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
 }
 .avatar{
@@ -39,11 +40,21 @@
     height: 50px;
     border-radius: 50%;
 }
-a{
+.a{
     text-decoration: none;
     color: white;
 }
-
+.a:hover{
+    color: #E69C00;
+}
+.btnd{
+    text-decoration: none;
+    color: aliceblue;
+}
+.cart1{
+    text-decoration: none;
+    color: white;
+}
 /* footer */
 footer{
     /* border: 2px solid red; */

@@ -2,13 +2,13 @@
     <div id="menu">
         <div class="menu">
             <div class="logo">
-                <a href=""><img class="log" src="{{ asset('images/logo.png') }}" alt="logo"></a>
+                <a href="{{ path('app_home') }}"><img class="log" src="{{ asset('images/logo.png') }}" alt="logo"></a>
             </div>
             <div class="right">
-                <a href="{{ path('app_home') }}">HOME</a>
-                <a href="{{ path('app_afficher') }}">MENU</a>
-                <a href="{{ path('app_about') }}">ABOUT</a>
-                <a href="">BOOK TABLE</a>
+                <a class="a" href="{{ path('app_home') }}">HOME</a>
+                <a class="a" href="{{ path('app_afficher') }}">MENU</a>
+                <a class="a" href="{{ path('app_about') }}">ABOUT</a>
+                <a class="a" href="">BOOK TABLE</a>
             </div>
             <div class="pro">
                 <div class="profile">
@@ -19,7 +19,7 @@
                             <a href="{{ path('app_admin_produit_index') }}" class="btnd">Back Office</a>
                         {% endif %}
                             <a class="btnd" href="{{ path('app_logout') }}">Se Déconnecter</a>
-                            <a href="#"><i data-feather="shopping-cart" class="cart"></i></a>
+                            <a href="#"><i data-feather="shopping-cart" class="cart1"></i></a>
                         {% if app.user.avatar %}
                             <a href="{{ path('app_profile') }}"><img id="avatar" src="{{ asset('images/avatar/' ~ app.user.avatar) }}" alt="avatar" class="avatar" aria-expanded="false"></a>
                         {% else %}

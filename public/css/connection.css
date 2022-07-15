@@ -100,6 +100,10 @@
     display: flex;
     justify-content: space-around;
 }
+.oub{
+    text-decoration: none;
+    color: aliceblue;
+}
 .oub:hover{
     color: #E69C00;
 }
