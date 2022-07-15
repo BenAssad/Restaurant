@@ -3,10 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    /* position: relative;
-    height: 2500px; */
-}
+
 /* nav-barre */
 #menu{
     background-color: rgb(34, 40, 49);
@@ -34,11 +31,12 @@ body{
     width: 450px;
     height: 80px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 .avatar{
     width: 50px;
+    height: 50px;
     border-radius: 50%;
 }
 a{
@@ -62,4 +60,18 @@ footer{
     justify-content: space-around;
     align-items: center;
     height: 300px;
+}
+/* button nav */
+.btnd{
+    background-color: #E69C00;
+    border-radius: 50px;
+    height: 40px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnd:hover{
+    background-color: #11100e;
+    color: red;
 }

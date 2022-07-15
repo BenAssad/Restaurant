@@ -5,7 +5,6 @@
 }
 /* page d'inscription */
 #form{
-    border: 2px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +31,6 @@
     display: flex;
     justify-content: space-around;
     width: 500px;
-    margin-left: 5px;
 }
 .ins{
     margin-bottom: 20px;
@@ -40,6 +38,12 @@
 .date{
     width: 95%;
     margin-left: 10px;
+}
+.accepter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 /* page de connection */
 .connection{
@@ -73,7 +77,11 @@
     margin-left: 30px;
     text-align: center;
 }
+
 .btn:hover{
     background-color: #E69C00;
     color: aliceblue;
+}
+.cart:hover{
+    color: #E69C00;
 }
