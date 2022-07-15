@@ -82,6 +82,15 @@
     background-color: #E69C00;
     color: aliceblue;
 }
+.cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E69C00;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
 .cart:hover{
-    color: #E69C00;
+    color: aliceblue;
 }

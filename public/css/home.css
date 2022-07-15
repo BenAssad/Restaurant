@@ -118,7 +118,6 @@
     flex-wrap: wrap;
 }
 .grid1{
-    border: 5px solid red;
     width: 23%;
     height: 450px;
     background-color: rgb(34, 40, 49);
@@ -132,7 +131,6 @@
 }
 .ig{
     height: 240px;
-    border: 5px solid rgb(98, 0, 255);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,7 +143,7 @@
     width: 195px;
     height: 195px;
     transition: 0.5s;
-    border: 2px dashed red;
+    border: 5px solid yellow;
 }
 
 

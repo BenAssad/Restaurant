@@ -112,8 +112,8 @@ const img1 = document.getElementsByClassName("itemImg");
 for(let i = 0; i < rec1.length; i++){
 
     rec1[i].addEventListener("mouseover", function(){
-        img1[i].style.height = "200px";
-        img1[i].style.width = "200px";
+        img1[i].style.height = "210px";
+        img1[i].style.width = "210px";
     });
 }
 for(let i = 0; i < rec1.length; i++){
