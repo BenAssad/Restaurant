@@ -103,3 +103,23 @@ for(let i = 0; i < rec.length; i++){
         img[i].style.width = "95%";
     });
 }
+
+// grid zomm
+
+const rec1 = document.getElementsByClassName("grid1");
+const img1 = document.getElementsByClassName("itemImg");
+
+for(let i = 0; i < rec1.length; i++){
+
+    rec1[i].addEventListener("mouseover", function(){
+        img1[i].style.height = "200px";
+        img1[i].style.width = "200px";
+    });
+}
+for(let i = 0; i < rec1.length; i++){
+
+    rec1[i].addEventListener("mouseout", function(){
+        img1[i].style.height = "195px";
+        img1[i].style.width = "195px";
+    });
+}
