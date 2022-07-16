@@ -16,6 +16,7 @@
             </div>
         </div>
         {% for element in datacart %}
+        <div class="blobl"></div>
         <div class="global">
             <div class="">
                 {% if element.produit.image %} 
@@ -23,9 +24,6 @@
                 {% else %}
                     <img src="{{ asset(  'images/home.jpg'   ) }}" class="itemImg">
                 {% endif %}
-                <div>
-                    <a href="{{path("delete", {id: element.produit.id})}}"><i data-feather="trash-2" class="i"></i></a>
-                </div>
             </div>
 
             <div class="desc">
@@ -40,6 +38,13 @@
                     {{ element.quantity }}
                     <button class="minus"><a href="{{path("app_add_to_cart", {id: element.produit.id})}}"> <i data-feather="plus" class="i"></i></a></button> 
                 </div>
+                <div class="delete">
+                    <a href="{{path("delete", {id: element.produit.id})}}"><i data-feather="trash-2" class="i"></i></a>
+                </div>
+            </div>
+
+            <div class="total">
+            
             </div>
 
         </div>
