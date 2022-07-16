@@ -39,7 +39,7 @@
                         <div class="pan">
                             <p>$ {{ produit.prix }}</p>
                             <div class="cart">
-                                <a href="#"><i data-feather="shopping-cart"></i></a>
+                                <a href="{{path("app_add_to_cart", {'id' : produit.id })}}"><i data-feather="shopping-cart"></i></a>
                             </div>
                         </div>
                     </div>

@@ -12,19 +12,16 @@
             </div>
             <div class="pro">
                 <div class="profile">
-                    {# <a href="#"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="#">Order Online</a> #}
                     {% if app.user %}
                         {% if is_granted('ROLE_ADMIN') %}
                             <a href="{{ path('app_admin_produit_index') }}" class="btnd">Back Office</a>
                         {% endif %}
                             <a class="btnd" href="{{ path('app_logout') }}">Se Déconnecter</a>
-                            <a href="#"><i data-feather="shopping-cart" class="cart1"></i></a>
+                            <a href="{{ path('app_cart') }}"><i data-feather="shopping-cart" class="cart1"></i></a>
                         {% if app.user.avatar %}
                             <a href="{{ path('app_profile') }}"><img id="avatar" src="{{ asset('images/avatar/' ~ app.user.avatar) }}" alt="avatar" class="avatar" aria-expanded="false"></a>
                         {% else %}
                             <img id="avatar" src="{{ asset('images/avatar.png') }}" alt="avatar" aria-expanded="false">
-                            <a href="{{ path('app_profile') }}">recimg</a>
                         {% endif %}
 
                     {% else %}
