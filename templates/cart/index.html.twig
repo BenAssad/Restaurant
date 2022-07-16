@@ -10,14 +10,43 @@
 
 {% block body %}
     <div class="panier">
-        <div>
-            <div>
-
+        <div class="vpa">
+            <div class="vpanier">
+    	    <h2>Votre Panier</h2>
             </div>
         </div>
+        {% for element in datacart %}
+        <div class="global">
+            <div class="">
+                {% if element.produit.image %} 
+                    <img src="{{ asset(  'images/produit/' ~ element.produit.image    ) }}"  class="itemImg">
+                {% else %}
+                    <img src="{{ asset(  'images/home.jpg'   ) }}" class="itemImg">
+                {% endif %}
+                <div>
+                    <a href="{{path("delete", {id: element.produit.id})}}"><i data-feather="trash-2" class="i"></i></a>
+                </div>
+            </div>
+
+            <div class="desc">
+                <p>{{ element.produit.titre }}</p>
+                <p>{{ element.produit.description }}</p>
+                <p>{{ element.produit.prix }}€</p>
+            </div>
+
+            <div class="plusminus">
+                <div class="plus">
+                    <button class="minus"><a href="{{path("remove", {id: element.produit.id})}}"> <i data-feather="minus" class="i"></i></a></button> 
+                    {{ element.quantity }}
+                    <button class="minus"><a href="{{path("app_add_to_cart", {id: element.produit.id})}}"> <i data-feather="plus" class="i"></i></a></button> 
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
     </div>
 
-    <section class="bg-light p-3">
+    {# <section class="bg-light p-3">
         <h1>Votre panier</h1>
     </section>
 
@@ -35,20 +64,16 @@
             {% for element in datacart %}
                 <tr>
                     <td>
-                        {% if element.produit.image %} 
-                            <img src="{{ asset(  'images/produit/' ~ element.produit.image    ) }}"  class="itemImg">
-                        {% else %}
-                            <img src="{{ asset(  'images/home.jpg'   ) }}" class="itemImg">
-                        {% endif %}
+                        
                     </td>
-                    <td class="text-end">{{ element.produit.prix }} €</td>
-                    <td>{{ element.quantity }}</td>
+                    
+                    <td></td>
                     <td class="text-end">{{ element.quantity * element.produit.prix }} €</td>
                     <td>
-                        <a href="{{path("app_add_to_cart", {id: element.produit.id})}}" class="btn btn-success">
+                        <a href="" class="btn btn-success">
                             <i class="bi bi-cart-plus"></i>
                         </a>
-                        <a href="{{path("remove", {id: element.produit.id})}}" class="btn btn-warning">
+                        <a href="" class="btn btn-warning">
                             <i class="bi bi-cart-dash"></i>
                         </a>
                         <a href="{{path("delete", {id: element.produit.id})}}" class="btn btn-danger">
@@ -73,5 +98,5 @@
                 </td>
             </tr>
         </tfoot>
-    </table>
+    </table> #}
 {% endblock %}
