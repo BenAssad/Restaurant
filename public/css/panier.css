@@ -10,6 +10,10 @@
     flex-direction: column;
     align-items: center;
 }
+.blobl{
+    border: 2px solid goldenrod;
+    width: 100%;
+}
 .global{
     border: 5px solid red;
     background-color: rgb(34, 40, 49);
@@ -17,7 +21,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 30%;
+    width: 40%;
+    margin-top: 50px;
 }
 .vpa{
     width: 100%;
