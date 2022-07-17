@@ -9,41 +9,70 @@
 {% block body %}
 
     <div id="gridmenu">
-
-            <div id="grid">
-              
-                    <div class="grid1">
-                        <div class="ig">
-                            {% if produits.image %} 
-                                <img src="{{ asset(  'images/produit/' ~ produits.image    ) }}"  class="itemImg">
+        <div id="grid">
+            <div class="grid1">
+                <div class="ig">
+                    {% if produits.image %} 
+                        <img src="{{ asset(  'images/produit/' ~ produits.image    ) }}"  class="itemImg">
+                    {% else %}
+                        <img src="{{ asset(  'images/home.jpg'   ) }}" class="itemImg">
+                    {% endif %}
+                </div>
+                <div class="grig2">
+                    <div class="">
+                        <h2>{{ produits.titre }}</h2>
+                        <p>{{ produits.description }}</p>
+                        <p>
+                            {% if produits.categorie %}
+                            {{ produits.categorie.name }}
                             {% else %}
-                                <img src="{{ asset(  'images/home.jpg'   ) }}" class="itemImg">
+                                N.A
                             {% endif %}
-                        </div>
-                        <div class="grig2">
-                            <div class="">
-                                <h2>{{ produits.titre }}</h2>
-                                <p>{{ produits.description }}</p>
-                                <p>
-                                    {% if produits.categorie %}
-                                        {{ produits.categorie.name }}
-                                    {% else %}
-                                        N.A
-                                    {% endif %}
-                                </p>
-                            </div>
-                            <div class="pan">
-                                <p>$ {{ produits.prix }}</p>
-                                <div class="cart">
-                                    <a href="{{path("app_add_to_cart", {'id' : produits.id })}}"><i data-feather="shopping-cart"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        </p>
                     </div>
-                
+                    <div class="pan">
+                        <p>$ {{ produits.prix }}</p>
+                        <div class="cart">
+                        <a href="{{path("app_add_to_cart", {'id' : produits.id })}}"><i data-feather="shopping-cart"></i></a>
+                    </div>
+
+                </div>
+            </div>
+                </div>
             </div>
         </div>
     </div>
+
+
+    {# commentaires #}
+
+    {% for comment in comments %}
+        <div class="message">
+            <h2>Par : {{ comment.user.lastname }}</h2>
+            <h3>Écrite le : Écrit le : {{ comment.dateAt|date("d/m/Y H:i") }}</h3>
+            <p>{{ comment.message }}</p>
+        </div>
+    {% else %}
+        {% if app.user %}
+            <h3>Soyez le premier à laisser votre avis</h3>
+        {% endif %}
+
+    {% endfor %}
+
+    {% if app.user %}
+        {{ form_start(fComment) }}
+            {{ form_row(fComment.message) }}
+        {{ form_end(fComment) }}
+
+        {# <input type="submit" value="Envoyer" class="btn btn-dark col-12"> #}
+
+    {% else %}
+        <h4 class="text-center">Veuillez vous <a href="{{ path('app_login')}}">connecter</a> pour laisser un commentaire...</h4>
+    {% endif %}
+
+
+
+
 
 {% block javascripts %}
     <script src="{{ asset('js/menu.js') }}"></script>
