@@ -1,0 +1,71 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Menu {% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
+{% endblock %}
+
+
+{% block body %}
+
+<div class="example-wrapper">
+     <div id="">
+        <h1 class="h1">Notre Menu</h1>
+        <div id="ul">
+            <ul>
+                <li>All</li>
+                <li>Burger</li>
+                <li>Pizza</li>
+                <li>Pizza</li>
+            </ul>
+        </div>
+    </div>
+    <div id="gridmenu">
+
+        <div id="grid">
+            {% for produit in produits %}
+                <div class="grid1">
+                    <div class="ig">
+                        <a href="{{      path(  "app_afficher"  ,  {'id' : produit.id }   )         }}" title="Cliquez pour afficher la fiche produit">  
+                        {% if produit.image %} 
+                            <img src="{{ asset(  'images/produit/' ~ produit.image    ) }}"  class="itemImg">
+                        {% else %}
+                            <img src="{{ asset(  'images/home.jpg'   ) }}" class="itemImg">
+                        {% endif %}
+                    </div>
+                    <div class="grig2">
+                        <div class="">
+                            <h2>{{ produit.titre }}</h2>
+                            {# <p>{{ produit.description }}</p> #}
+                            <p>
+                                {% if produit.categorie %}
+                                    {{ produit.categorie.name }}
+                                {% else %}
+                                    N.A
+                                {% endif %}
+                            </p>
+                        </div>
+                        <div class="pan">
+                            <p>$ {{ produit.prix }}</p>
+                            <div class="cart">
+                                <a href="{{path("app_add_to_cart", {'id' : produit.id })}}"><i data-feather="shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+    
+    {% block javascripts %}
+        <script src="{{ asset('js/menu.js') }}"></script>
+    {% endblock %}
+
+
+
+
+
+{% endblock %}
