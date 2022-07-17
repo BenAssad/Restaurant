@@ -50,6 +50,15 @@ class Produit
      */
     private $categorie;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="produit")
+     */
+    private $comments;
+
+    
+
+    
+
  
 
 
@@ -59,6 +68,8 @@ class Produit
     public function __construct()
     {
         $this->createdAt = new \DateTimeImmutable('now');
+        $this->commet = new ArrayCollection();
+        $this->comments = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -137,5 +148,39 @@ class Produit
 
         return $this;
     }
+
+    /**
+     * @return Collection<int, Comment>
+     */
+    public function getComments(): Collection
+    {
+        return $this->comments;
+    }
+
+    public function addComment(Comment $comment): self
+    {
+        if (!$this->comments->contains($comment)) {
+            $this->comments[] = $comment;
+            $comment->setProduit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeComment(Comment $comment): self
+    {
+        if ($this->comments->removeElement($comment)) {
+            // set the owning side to null (unless already changed)
+            if ($comment->getProduit() === $this) {
+                $comment->setProduit(null);
+            }
+        }
+
+        return $this;
+    }
+
+    
+
+    
     
 }
