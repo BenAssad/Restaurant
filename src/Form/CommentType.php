@@ -27,9 +27,6 @@ class CommentType extends AbstractType
                     "class" => "btn btn-primary"
                 ]
             ])
-            // ->add('dateAt')
-            // ->add('produit')
-            // ->add('user')
         ;
     }
 
