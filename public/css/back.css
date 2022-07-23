@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.table{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.table1{
+    width: 80%;
+}
+.tableimg{
+    width: 220px;
+    height: 150px;
+}
+
+/* reglage des bouttons sup modifier et boir */
+.maybtn{
+    width: 150px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn1{
+    background-color: #E69C00;
+    color: aliceblue;
+    width: 35px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.btn1:hover{
+    background-color: #E69C00;
+    color: aliceblue;
+}
+.danger:hover{
+    background-color: red;
+}
+.vert:hover{
+    background-color: green;
+}
+.bleu:hover{
+    background-color: blue;
+}
+.maybt{
+    border: 2px solid red;
+}
+
