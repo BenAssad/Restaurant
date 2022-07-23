@@ -45,30 +45,35 @@
 
 
     {# commentaires #}
+    <div class="commentaire">
+        <div class="comm">
+            {% for comment in comments %}
+                <div class="message">
+                    <h2>Par : {{ comment.user.lastname }}</h2>
+                    <h3>Écrite le : Écrit le : {{ comment.dateAt|date("d/m/Y H:i") }}</h3>
+                    <p>{{ comment.message }}</p>
+                </div>
+            {% else %}
+                {% if app.user %}
+                    <h3>Soyez le premier à laisser votre avis</h3>
+                {% endif %}
 
-    {% for comment in comments %}
-        <div class="message">
-            <h2>Par : {{ comment.user.lastname }}</h2>
-            <h3>Écrite le : Écrit le : {{ comment.dateAt|date("d/m/Y H:i") }}</h3>
-            <p>{{ comment.message }}</p>
+            {% endfor %}
+            {% if app.user %}
+                {{ form_start(fComment) }}
+                    {{ form_row(fComment.message) }}
+                    
+                    <div class="b2">
+                        <input type="submit" value="Envoyer" class="btn">
+                    </div>
+
+                {{ form_end(fComment) }}
+
+            {% else %}
+                <h4 class="text-center">Veuillez vous <a href="{{ path('app_login')}}">connecter</a> pour laisser un commentaire...</h4>
+            {% endif %}
         </div>
-    {% else %}
-        {% if app.user %}
-            <h3>Soyez le premier à laisser votre avis</h3>
-        {% endif %}
-
-    {% endfor %}
-
-    {% if app.user %}
-        {{ form_start(fComment) }}
-            {{ form_row(fComment.message) }}
-        {{ form_end(fComment) }}
-
-        {# <input type="submit" value="Envoyer" class="btn btn-dark col-12"> #}
-
-    {% else %}
-        <h4 class="text-center">Veuillez vous <a href="{{ path('app_login')}}">connecter</a> pour laisser un commentaire...</h4>
-    {% endif %}
+    </div>
 
 
 

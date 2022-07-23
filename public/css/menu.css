@@ -92,3 +92,16 @@ ul{
 .afficher:hover{
     color: aliceblue;
 }
+/* commentaires */
+.commentaire{
+    display: flex;
+    justify-content: center;
+}
+.comm{
+    width: 60%;
+}
+.b2{
+    display: flex;
+    justify-content: flex-end;
+}
+

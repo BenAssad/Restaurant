@@ -22,11 +22,6 @@ class CommentType extends AbstractType
                     "placeholder" => "Donnez votre avis sur ce produit"
                 ]
             ])
-            ->add('Envoyer', SubmitType::class, [
-                "attr" => [
-                    "class" => "btn btn-primary"
-                ]
-            ])
         ;
     }
 
