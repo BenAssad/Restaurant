@@ -27,7 +27,7 @@
             {% for produit in produits %}
                 <div class="grid1">
                     <div class="ig">
-                        <a href="{{      path(  "app_afficher"  ,  {'id' : produit.id }   )         }}" title="Cliquez pour afficher la fiche produit">  
+                        <a class="afficher" href="{{      path(  "app_afficher"  ,  {'id' : produit.id }   )         }}" title="Cliquez pour afficher la fiche produit">  
                         {% if produit.image %} 
                             <img src="{{ asset(  'images/produit/' ~ produit.image    ) }}"  class="itemImg">
                         {% else %}
