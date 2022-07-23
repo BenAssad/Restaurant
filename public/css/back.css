@@ -51,4 +51,14 @@
 .maybt{
     border: 2px solid red;
 }
-
+/* formulaire de produit */
+.produit{
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ph{
+    height: 100px;
+}
