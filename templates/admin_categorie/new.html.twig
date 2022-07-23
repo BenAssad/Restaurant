@@ -2,12 +2,18 @@
 
 {% block title %}New Categorie{% endblock %}
 
-{% block body %}
-<div class="table">
-    <h1>Create new Categorie</h1>
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/back.css')}}">
+{% endblock %}
 
+{% block body %}
+<div class="produit">
+    <h1 class="ph">Ajout de Catégorie</h1>
+
+    <div class="produit1">
     {{ include('admin_categorie/_form.html.twig') }}
 
-    <a href="{{ path('app_admin_categorie_index') }}">back to list</a>
+    <a class="btn" href="{{ path('app_admin_categorie_index') }}">Voir les Catégories</a>
+    </div>
 </div>
 {% endblock %}
