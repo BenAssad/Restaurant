@@ -85,4 +85,13 @@ class ProduitController extends AbstractController
             "formfilter" =>$form->createView()
         ]);
     }
+    /**
+     * @Route("/about", name="app_about")
+     */
+    public function about(): Response
+    {
+
+
+        return $this->render('produit/about.html.twig');
+    }
 }
