@@ -14,7 +14,6 @@ class HomeController extends AbstractController
     public function index(): Response
     {
         return $this->render('home/index.html.twig', [
-            'controller_name' => 'HomeController',
         ]);
     }
     /**
@@ -23,6 +22,15 @@ class HomeController extends AbstractController
     public function about(): Response
     {
         return $this->render('home/about.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+    /**
+     * @Route("book_table", name="app_table")
+     */
+    public function table(): Response
+    {
+        return $this->render('home/table.html.twig', [
             'controller_name' => 'HomeController',
         ]);
     }

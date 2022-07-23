@@ -85,3 +85,10 @@ ul{
     display: flex;
     justify-content: space-between;
 }
+.afficher{
+    text-decoration: none;
+    color: aliceblue;
+}
+.afficher:hover{
+    color: aliceblue;
+}
