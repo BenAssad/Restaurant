@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Produit;
+use App\Filter\ProduitFilter;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -63,4 +64,30 @@ class ProduitRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+
+    public function findFiltre(ProduitFilter $filter)
+    {
+        $query = $this->createQueryBuilder("p")
+        ->leftJoin("p.categorie" , "c")
+        ;
+        if ($filter->categorie) 
+        {
+            $query = $query
+            ->andWhere("c.id IN(:cat)")
+            ->setParameter("cat", $filter->categorie)
+            ;
+        }
+        if ($filter->recherche) 
+        {
+            $query = $query
+            ->andWhere("p.titre LIKE :recherche")
+            ->orWhere("p.description LIKE :recherche")
+            ->orWhere("p.prix LIKE :recherche")
+            ->orWhere("c.name LIKE :recherche")
+            ->setParameter("recherche", "%$filter->recherche%")
+            ;
+        }
+        return $query->getQuery()->getResult();
+    }
+
 }

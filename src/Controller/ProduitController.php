@@ -4,11 +4,12 @@ namespace App\Controller;
 
 use App\Entity\Comment;
 use App\Entity\Produit;
+use App\Filter\ProduitFilter;
 use App\Form\CommentType;
+use App\Form\FilterType;
 use App\Repository\CommentRepository;
 use App\Repository\ProduitRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Doctrine\ORM\Tools\Pagination\Paginator;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -69,7 +70,11 @@ class ProduitController extends AbstractController
      */
     public function catalogue(ProduitRepository $reproduit, PaginatorInterface $paginator, Request $request): Response
     {
-        $data = $reproduit->findAll();
+        $filter = new ProduitFilter;
+        $form = $this->createForm(FilterType::class, $filter);
+        $form->handleRequest($request);
+
+        $data = $reproduit->findFiltre($filter);
         $produits = $paginator->paginate(
             $data,
             $request->query->getInt('page' , 1),
@@ -77,6 +82,7 @@ class ProduitController extends AbstractController
         );
         return $this->render('produit/catalogue.html.twig', [
             "produits" => $produits,
+            "formfilter" =>$form->createView()
         ]);
     }
 }

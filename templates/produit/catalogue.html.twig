@@ -13,12 +13,12 @@
      <div id="">
         <h1 class="h1">Notre Menu</h1>
         <div id="ul">
+                {{ form_start(formfilter) }}
             <ul>
-                <li>All</li>
-                <li>Burger</li>
-                <li>Pizza</li>
-                <li>Pizza</li>
+                <li>{{form_row(formfilter.categorie)}}</li>
+                <li>{{form_row(formfilter.recherche)}}</li>
             </ul>
+                {{ form_end(formfilter) }}
         </div>
     </div>
     <div id="gridmenu">
@@ -61,7 +61,7 @@
 
 <div class="d-flex justify-content-center">
     {% do produits.setPageRange(2) %}
-    {{ knp_pagination_render(produits, 'pagination.html.twig') }}
+    {{ knp_pagination_render(produits, 'base/pagination.html.twig') }}
 </div>
 
     
