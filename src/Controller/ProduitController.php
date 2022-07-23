@@ -8,6 +8,8 @@ use App\Form\CommentType;
 use App\Repository\CommentRepository;
 use App\Repository\ProduitRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\Tools\Pagination\Paginator;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -28,6 +30,8 @@ class ProduitController extends AbstractController
             'controller_name' => 'ProduitController',
         ]);
     }
+
+    
     /**
      * @Route("/afficher/{id}", name="app_afficher")
      */
@@ -63,9 +67,14 @@ class ProduitController extends AbstractController
     /**
      * @Route("/catalogue", name="app_catalogue")
      */
-    public function catalogue(ProduitRepository $reproduit): Response
+    public function catalogue(ProduitRepository $reproduit, PaginatorInterface $paginator, Request $request): Response
     {
-        $produits = $reproduit->findAll();
+        $data = $reproduit->findAll();
+        $produits = $paginator->paginate(
+            $data,
+            $request->query->getInt('page' , 1),
+            9
+        );
         return $this->render('produit/catalogue.html.twig', [
             "produits" => $produits,
         ]);
