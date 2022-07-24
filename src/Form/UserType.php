@@ -33,7 +33,7 @@ class UserType extends AbstractType
             ->add('phoneNumber', NumberType::class, [
 
             ])
-            // ->add('password')
+
             
         ;
         if ($options["avatar"]) 
