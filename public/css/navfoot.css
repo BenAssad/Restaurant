@@ -125,3 +125,6 @@ footer{
    padding: 5px;
    margin: 10px;
 }
+.ficon:hover{
+    color: #E69C00;
+}
