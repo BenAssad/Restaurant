@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\CommentRepository;
 use App\Repository\ProduitRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -12,14 +13,26 @@ class HomeController extends AbstractController
     /**
      * @Route("", name="app_home")
      */
-    public function home(ProduitRepository $repoproduit): Response
+    public function home(): Response
     {
-        $produits = $repoproduit->findhome();
-
         return $this->render('home/home.html.twig', [
-            'produits' => $produits
+            
         ]);
     }
+    /**
+     * @Route("", name="app_home")
+     */
+    public function commentaire(CommentRepository $repocomment, ProduitRepository $repoproduit): Response
+    {
+        $comments = $repocomment->findAll();
+       
+
+        return $this->render('home/home.html.twig', [
+            'comments' => $comments,
+            'produits' => $repoproduit->findhome()
+        ]);
+    }
+
     /**
      * @Route("about", name="app_about")
      */

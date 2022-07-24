@@ -119,6 +119,12 @@
       </div>
    </div>
 
+   <div class="commenthome">
+      {% for comment in comments %}
+         <p>{{ comment.user.lastname }}</p>
+      {% endfor %}
+   </div>
+
 
    {% block javascripts %}
            
