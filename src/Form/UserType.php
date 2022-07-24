@@ -17,7 +17,8 @@ class UserType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-        $builder
+        if ($options['civil']) {
+            $builder
             ->add('email', EmailType::class, [
 
             ])
@@ -33,9 +34,26 @@ class UserType extends AbstractType
             ->add('phoneNumber', NumberType::class, [
 
             ])
+            ;
+        }
+        if ($options['address']) {
 
-            
-        ;
+            $builder
+                    ->add('address', TextType::class, [
+
+                    ])
+                    ->add('codePostale', NumberType::class, [
+
+                    ])
+                    ->add('ville', TextType::class, [
+
+                    ])
+                    ->add('region', TextType::class, [
+                        
+                    ])
+            ;
+        }
+
         if ($options["avatar"]) 
         {
             $builder->add('avatar', FileType::class, [
@@ -68,7 +86,10 @@ class UserType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => User::class,
+            'civil' => false,
             'avatar' => false,
+            'avatarEdit' => false,
+            'address' => false,
             'sub' => false
         ]);
     }
