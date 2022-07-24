@@ -89,5 +89,12 @@ class ProduitRepository extends ServiceEntityRepository
         }
         return $query->getQuery()->getResult();
     }
-
+    public function findhome()
+    {
+        return $this->createQueryBuilder('p')
+            ->setMaxResults(6)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 }
