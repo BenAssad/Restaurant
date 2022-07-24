@@ -9,30 +9,33 @@
 {% block body %}
     <div class="profil">
         <div class="prof">
-            <ul>
-                <div class="ava">
-                    <li class="imagep">
-                    {% if app.user.avatar %}
-                        <a href="{{ path('app_profile') }}"><img id="avatar" src="{{ asset('images/avatar/' ~ app.user.avatar) }}" alt="avatar" class="imgprofile" aria-expanded="false"></a>
-                    {% else %}
-                        <img class="imgprofile" src="{{ asset('images/avatar.png') }}" alt="avatar" aria-expanded="false">
-                    {% endif %}
-                    </li>
-                </div>
-                <div class="user">
-                    <li>Nom : {{ app.user.name }}</li>
-                    <li>Prénom : {{ app.user.lastname }}</li>
-                    <li>Email : {{ app.user.email }}</li>
-                    <li>Date de naissance : {{ app.user.birthAt|date('j-m-Y') }}</li>
-                </div>
-            </ul>
-            <ul>
-                <li>Address : {{ app.user.address }}</li>
-                <li>Code Postal :{{ app.user.codePostale }}</li>
-                <li>Ville : {{ app.user.ville }}</li>
-                <li>Region : {{ app.user.region }}</li>
-            </ul>
-            
+                    <div class="ava">
+                        <li class="imagep">
+                        {% if app.user.avatar %}
+                            <a href="{{ path('app_profile') }}"><img id="avatar" src="{{ asset('images/avatar/' ~ app.user.avatar) }}" alt="avatar" class="imgprofile" aria-expanded="false"></a>
+                        {% else %}
+                            <img class="imgprofile" src="{{ asset('images/avatar.png') }}" alt="avatar" aria-expanded="false">
+                        {% endif %}
+                        </li>
+                    </div>
+            <div class="adress">
+                <ul>
+                    <div class="user">
+                        <li>Nom : {{ app.user.name }}</li>
+                        <li>Prénom : {{ app.user.lastname }}</li>
+                        <li>Email : {{ app.user.email }}</li>
+                        <li>Téléphone : {{ app.user.phoneNumber }}</li>
+                        <li>Date de naissance : {{ app.user.birthAt|date('j-m-Y') }}</li>
+                    </div>
+                </ul>
+                <ul>
+                    <li>Address : {{ app.user.address }}</li>
+                    <li>Code Postal :{{ app.user.codePostale }}</li>
+                    <li>Ville : {{ app.user.ville }}</li>
+                    <li>Region : {{ app.user.region }}</li>
+                </ul>
+                
+            </div>
             <div class="changeprofile">
                 <a class="btn" href="{{ path('app_profile_edit', {id: app.user.id}) }}">Modifier Profil</a>
                 <a class="btn" href="{{ path('app_address', {id: app.user.id}) }}">Modifier Address</a>

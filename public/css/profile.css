@@ -14,7 +14,7 @@
     border: 2px solid yellow;
     background-color: rgb(34, 40, 49);
     color: aliceblue;
-    height: 550px;
+    height: 599px;
     width: 40%;
     border-radius: 20px;
 }
@@ -47,4 +47,8 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.adress{
+    display: flex;
+    justify-content: space-around;
 }
