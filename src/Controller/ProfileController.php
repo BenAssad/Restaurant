@@ -73,6 +73,8 @@ class ProfileController extends AbstractController
             
             $manager->persist($user);
             $manager->flush();
+
+            return $this->redirectToRoute('app_profile');
         }
 
 

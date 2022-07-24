@@ -26,11 +26,17 @@
                     <li>Date de naissance : {{ app.user.birthAt|date('j-m-Y') }}</li>
                 </div>
             </ul>
+            <ul>
+                <li>Address : {{ app.user.address }}</li>
+                <li>Code Postal :{{ app.user.codePostale }}</li>
+                <li>Ville : {{ app.user.ville }}</li>
+                <li>Region : {{ app.user.region }}</li>
+            </ul>
             
-        <div class="changeprofile">
-            <a class="btn" href="{{ path('app_profile_edit', {id: app.user.id}) }}">Modifier Profil</a>
-            <a class="btn" href="{{ path('app_address', {id: app.user.id}) }}">Modifier Address</a>
-        </div>
+            <div class="changeprofile">
+                <a class="btn" href="{{ path('app_profile_edit', {id: app.user.id}) }}">Modifier Profil</a>
+                <a class="btn" href="{{ path('app_address', {id: app.user.id}) }}">Modifier Address</a>
+            </div>
         </div>
     </div>
 {% endblock %}
