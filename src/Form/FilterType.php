@@ -15,13 +15,13 @@ class FilterType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            // ->add('categorie', EntityType::class, [
-            //     "class" => Categorie::class,
-            //     "choice_label" => "name",
-            //     "multiple" => true,
-            //     "expanded" => true,
-            //     "required" => false
-            //     ])
+            ->add('categorie', EntityType::class, [
+                "class" => Categorie::class,
+                "choice_label" => "name",
+                "multiple" => true,
+                "expanded" => true,
+                "required" => false
+                ])
                 ->add('recherche', TextType::class, [
                 "required" => false
             ])

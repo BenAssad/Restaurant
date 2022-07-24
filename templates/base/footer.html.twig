@@ -1,27 +1,39 @@
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/navfoot.css') }}">
+{% endblock %}
+
 <footer>
     <div id="footer">
         <div class="partie1">
             <div class="p1">
-                <h2>Contactez-Nous</h2>
-                <a href="#"><p>Location</p></a>
-                <a href="#"><p>Télephone 123456789</p></a>
-                <a href="#"><p>ben@gmail.com</p></a> 
+                <h2 class="fh2">Contactez-Nous</h2>
+                <a class="opensans" href="#"><i data-feather="map-pin"></i> Location</a>
+                <a class="opensans" href="#"><i data-feather="phone"></i> Télephone 123456789</a>
+                <a class="opensans" href="#"><i data-feather="mail"></i> ben@gmail.com</a> 
             </div>
         </div>
-        <div class="partie2">
-            <div class="p2">
-                <h2>Feane</h2>
-                <p>Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with </p>
-                <div class="icon"></div>
+        <div class="partie1">
+            <div class="p1">
+                <h2 class="fh2">Feane</h2>
+                <p class="opensans">Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with </p>
+                <div class="icon">
+                    <a href="#"><i data-feather="facebook"></i></a> 
+                    <a href="#"><i data-feather="twitter"></i></a> 
+                    <a href="#"><i data-feather="instagram"></i></a> 
+                </div>
             </div>
         </div>
-        <div class="partie3">
-            <div class="p3">
-                <h2>Opening Hours</h2>
-                <p>Opening Hours</p>
-                <p>10.00 Am -10.00 Pm </p>
+        <div class="partie1">
+            <div class="p1">
+                <h2 class="fh2">Opening Hours</h2>
+                <p class="opensans">Everday</p>
+                <p class="opensans">10.00 Am -10.00 Pm </p>
             </div>
         </div>
     </div>
-    <p>© 2022 All Rights Reserved By Free Html Templates</p>
+    <div class="opensans">
+        <p>© 2022 All Rights Reserved By Free Html Templates</p>
+        <p>© Distributed By ThemeWagon</p>
+    </div>
 </footer>

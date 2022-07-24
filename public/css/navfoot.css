@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 
 /* nav-barre */
@@ -55,24 +58,6 @@
     text-decoration: none;
     color: white;
 }
-/* footer */
-footer{
-    /* border: 2px solid red; */
-    background-color: rgb(34, 40, 49);
-    /* position: absolute;
-    bottom: 0; */
-    height: 400px;
-    width: 100%;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-}
-#footer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 300px;
-}
-/* button nav */
 .btnd{
     background-color: #E69C00;
     border-radius: 50px;
@@ -85,4 +70,49 @@ footer{
 .btnd:hover{
     background-color: #11100e;
     color: red;
+}
+
+
+/* footer */
+footer{
+    background-color: rgb(34, 40, 49);
+    height: 500px;
+    width: 100%;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 450px;
+    width: 90%;
+}
+.partie1{
+    width: 50%;
+    margin: 20px;
+}
+.p1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.p1 >a {
+    text-decoration: none;
+    color: aliceblue;
+    margin: 10px;
+}
+.fh2{
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+.opensans{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
 }
