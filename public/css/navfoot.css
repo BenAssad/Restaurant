@@ -116,3 +116,12 @@ footer{
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
 }
+.ficon{
+   text-decoration: none;
+   color: black;
+   border-radius: 50%;
+   border: 2px solid white;
+   background-color: aliceblue;
+   padding: 5px;
+   margin: 10px;
+}
