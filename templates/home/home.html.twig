@@ -121,14 +121,14 @@
 
 
 <div class="comment">
-    <h2>Ce que dis nos Clients</h2>
+    <h2 class="ce">Ce que dis nos Clients</h2>
     <div class="comment1">
         <div class="commentmessage"  id="commentmessage">
             {% for comment in comments %}
                 <div class="ctm">
                         <div class="messageuser">
-                            <h4>{{ comment.user.lastname }} {{ comment.user.name }}</h4>
-                            <p>{{ comment.message }}</p>
+                            <p class="mmm">{{ comment.message }}</p>
+                            <h4 class="mmm">{{ comment.user.lastname }} {{ comment.user.name }}</h4>
                         </div>
                         <div class="ctmuser">
                             {% if comment.user.avatar %}

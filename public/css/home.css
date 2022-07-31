@@ -192,20 +192,20 @@
 
 /* homme commentaire design */
 .comment{
-    /* border: 2px solid rebeccapurple; */
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */
     margin-bottom: 100px;
+    margin: 50px;
+}
+.ce{
+    margin-bottom: 50px;
 }
 .comment1{
-    border: 3px dotted green;
-    width: 80%;
-    height: 500px;
-    margin: auto;
+    width: 70%;
+    height: 350px;
     overflow: hidden;
 }
 .commentmessage{
@@ -216,15 +216,14 @@
     
 }
 .ctm{
-    border: 3px dashed red;
     width: 700px;
     height: 400px;
     flex: 1 0 25%;
 }
 .messageuser{
-    /* border: 2px solid red; */
     height: 200px;
     background-color: #222831;
+    border-radius: 10px;
     color: white;
 }
 .ctmuser{
@@ -234,6 +233,7 @@
     display: flex;
     justify-content: space-around;
     width: 10%;
+    align-items: center;
 }
 #btn-left ,#btn-rght{
     background-color: #E69C00;
@@ -247,4 +247,7 @@
     width: 90px;
     height: 90px;
     border-radius: 50%;
+}
+.mmm{
+    margin-left: 30px;
 }
