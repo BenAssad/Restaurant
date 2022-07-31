@@ -143,8 +143,8 @@ window.onload = () => {
     slidetimes = comment1.getBoundingClientRect().width
 
     
-    let next = document.querySelector("#btn-rght")
-    let prev = document.querySelector("#btn-left")
+    let next = document.querySelector("#btn-left")
+    let prev = document.querySelector("#btn-rght")
 
     
     next.addEventListener("click", slideNext)
@@ -179,33 +179,22 @@ function slideNext(){
     commentmessage.style.transform = `translateX(${decal}px)`
 }
 
-/**
- * Cette fonction fait défiler le comment1rama vers la gauche
- */
 function slidePrev(){
-    // On décrémente le compteur
-    compteur--
 
-    // Si on dépasse le début du comment1rama, on repart à la fin
+    compteur--
     if(compteur < 0){
         compteur = slide.length - 1
     }
 
-    // On calcule la valeur du décalage
     let decal = -slidetimes * compteur
     commentmessage.style.transform = `translateX(${decal}px)`
 }
 
-/**
- * On stoppe le défilement
- */
 function stopTimer(){
     clearInterval(timer)
 }
 
-/**
- * On redémarre le défilement
- */
+
 function startTimer(){
     timer = setInterval(slideNext, 4000)
 }
