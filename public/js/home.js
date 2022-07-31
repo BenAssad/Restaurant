@@ -123,3 +123,89 @@ for(let i = 0; i < rec1.length; i++){
         img1[i].style.width = "195px";
     });
 }
+
+
+
+// Slider
+
+let compteurs = 0 
+let timers, commentmessage, slide, slidetimes
+
+window.onload = () => {
+    
+    const comment1 = document.querySelector(".comment1")
+
+    commentmessage = document.querySelector(".commentmessage")
+
+    slide = Array.from(commentmessage.children)
+
+    
+    slidetimes = comment1.getBoundingClientRect().width
+
+    
+    let next = document.querySelector("#btn-rght")
+    let prev = document.querySelector("#btn-left")
+
+    
+    next.addEventListener("click", slideNext)
+    prev.addEventListener("click", slidePrev)
+
+    
+    timer = setInterval(slideNext, 4000)
+
+    
+    comment1.addEventListener("mouseover", stopTimer)
+    comment1.addEventListener("mouseout", startTimer)
+
+    
+    window.addEventListener("resize", () => {
+        slidetimes = comment1.getBoundingClientRect().width
+        slideNext()
+    })
+}
+
+
+function slideNext(){
+    
+    compteur++
+
+    
+    if(compteur == slide.length){
+        compteur = 0
+    }
+
+    
+    let decal = -slidetimes * compteurs
+    commentmessage.style.transform = `translateX(${decal}px)`
+}
+
+/**
+ * Cette fonction fait défiler le comment1rama vers la gauche
+ */
+function slidePrev(){
+    // On décrémente le compteur
+    compteur--
+
+    // Si on dépasse le début du comment1rama, on repart à la fin
+    if(compteur < 0){
+        compteur = slide.length - 1
+    }
+
+    // On calcule la valeur du décalage
+    let decal = -slidetimes * compteur
+    commentmessage.style.transform = `translateX(${decal}px)`
+}
+
+/**
+ * On stoppe le défilement
+ */
+function stopTimer(){
+    clearInterval(timer)
+}
+
+/**
+ * On redémarre le défilement
+ */
+function startTimer(){
+    timer = setInterval(slideNext, 4000)
+}

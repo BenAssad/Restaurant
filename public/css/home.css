@@ -191,30 +191,60 @@
 }
 
 /* homme commentaire design */
-.commenthome{
+.comment{
+    /* border: 2px solid rebeccapurple; */
     width: 100%;
-    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* overflow: hidden; */
+    margin-bottom: 100px;
 }
-.ch{
-    border: 2px solid red;
-    width: 60%;
-    height: 300px;
+.comment1{
+    border: 3px dotted green;
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    overflow: hidden;
+}
+.commentmessage{
     display: flex;
+    transition: 1s linear;
+    column-gap: 20px;
+    width: 200%;
+    
 }
-.cht{
-    border: 2px solid black;
-    width: 59%;
-    height: 220px;
-    background-color: rgb(34, 40, 49);
+.ctm{
+    border: 3px dashed red;
+    width: 700px;
+    height: 400px;
+    flex: 1 0 25%;
+}
+.messageuser{
+    /* border: 2px solid red; */
+    height: 200px;
+    background-color: #222831;
+    color: white;
+}
+.ctmuser{
+    margin-top: 20px;
+}
+.fleche{
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
+}
+#btn-left ,#btn-rght{
+    background-color: #E69C00;
+    border-radius: 50%;
+    width: 30%;
+    height: 30%;
+    padding: 7px;
     color: aliceblue;
 }
-.ch2{
-    height: 100px;
-    font-family: 'Dancing Script', cursive;
-    font-size: 50px;
+#cmav{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
 }
-

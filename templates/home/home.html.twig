@@ -119,27 +119,37 @@
       </div>
    </div>
 
-   <div class="commenthome">
-      <h2 class="ch2">Ce que disent nos clients</h2>
-      <div class="ch">
+
+<div class="comment">
+    <h2>Ce que dis nos Clients</h2>
+    <div class="comment1">
+        <div class="commentmessage"  id="commentmessage">
             {% for comment in comments %}
-         <div class="cht">
-               <p>{{ comment.message }}</p>
-               <h4>{{ comment.user.lastname }} {{ comment.user.name }}</h4>
-         </div>
-               {% if comment.user.avatar %}
-                     <a href="{{ path('app_profile') }}"><img id="avatar" src="{{ asset('images/avatar/' ~ comment.user.avatar) }}" alt="avatar" class="avatar" aria-expanded="false"></a>
-               {% else %}
-                  <img id="avatar" src="{{ asset('images/avatar.png') }}" alt="avatar" aria-expanded="false">
-               {% endif %}
+                <div class="ctm">
+                        <div class="messageuser">
+                            <h4>{{ comment.user.lastname }} {{ comment.user.name }}</h4>
+                            <p>{{ comment.message }}</p>
+                        </div>
+                        <div class="ctmuser">
+                            {% if comment.user.avatar %}
+                                <img id="cmav" src="{{ asset('images/avatar/' ~ comment.user.avatar) }}" alt="avatar" aria-expanded="false">
+                            {% else %}
+                                <img id="cmav" src="{{ asset('images/avatar.png') }}" alt="avatar" aria-expanded="false">
+                            {% endif %}
+                        </div>
+                </div>
             {% endfor %}
-      </div>
-   </div>
+        </div>
+    </div>`
+    <div class="fleche">
+        <i id="btn-left" data-feather="arrow-left"></i>
+        <i id="btn-rght" data-feather="arrow-right"></i>
+    </div>
+</div>
 
 
-   {% block javascripts %}
-           
+{% block javascripts %}
     <script src="{{ asset('js/home.js') }}"></script>
-   {% endblock %}
+{% endblock %}
    
 {% endblock %}
