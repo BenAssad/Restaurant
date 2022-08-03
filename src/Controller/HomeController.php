@@ -42,13 +42,4 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
-    /**
-     * @Route("book_table", name="app_table")
-     */
-    public function table(): Response
-    {
-        return $this->render('home/table.html.twig', [
-            'controller_name' => 'HomeController',
-        ]);
-    }
 }
