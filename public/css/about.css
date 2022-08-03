@@ -3,21 +3,22 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+#about{
+    background-image: url("../images/home.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 790px;
+}
 .about{
+    height: 790px;
     display: flex;
+    justify-content: flex-start;
 }
 .para{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 50%;
     align-items: center;
-}
-.imgabout{
-    height: 750px;
-    width: 55%;
-}
-.para{
-    border: 2px solid red;
-    background-color: rgb(34, 40, 49);
-    color: aliceblue;
+    color: whitesmoke;
+    margin-left: 50px;
 }
