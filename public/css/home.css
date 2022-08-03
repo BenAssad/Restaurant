@@ -225,6 +225,9 @@
     background-color: #222831;
     border-radius: 10px;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 .ctmuser{
     margin-top: 20px;
@@ -255,6 +258,11 @@
 }
 .mmm{
     margin-left: 30px;
+    margin-top: 30px;
+}
+.mmm1{
+    margin-left: 30px;
+    margin-top: 60px;
 }
 .afficher{
     color: aliceblue;
