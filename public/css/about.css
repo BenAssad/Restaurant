@@ -3,7 +3,20 @@
     margin: 0;
     box-sizing: border-box;
 }
-#about{
-    height: 120vh;
-    
+.about{
+    display: flex;
+}
+.para{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imgabout{
+    height: 750px;
+}
+.para{
+    border: 2px solid red;
+    background-color: rgb(34, 40, 49);
+    color: aliceblue;
 }
