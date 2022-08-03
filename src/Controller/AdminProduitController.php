@@ -125,4 +125,15 @@ class AdminProduitController extends AbstractController
 
         return $this->redirectToRoute('app_admin_produit_index', [], Response::HTTP_SEE_OTHER);
     }
+
+
+    /**
+     * @Route("/book/table/reservation", name="app_reservation")
+     */
+    public function reservation(): Response
+    {
+
+
+        return $this->render('');
+    }
 }
