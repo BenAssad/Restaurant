@@ -150,10 +150,15 @@ footer{
     display: block;
     margin-right: 20px;
     margin-top: 35px;
+    border: 2px dashed red;
+  }
+  #X{
+    color: aliceblue;
   }
   #menu{
     border: 2px solid white;
-    height: 500px;
+    height:100px;
+    
   }
   .menu{
     display: flex;

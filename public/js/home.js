@@ -126,6 +126,9 @@ for(let i = 0; i < rec1.length; i++){
 
 
 
+
+
+
 // Slider
 
 let compteurs = 0 
