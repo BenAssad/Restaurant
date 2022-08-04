@@ -58,7 +58,6 @@
 
 /* partie menu */
 #rectangle{
-    /* border: 2px solid rgb(85, 0, 255); */
     width: 100%;
     height: 400px;
     display: flex;
@@ -75,6 +74,16 @@
 }
 .rec1{
 
+    background-color: rgb(34, 40, 49);
+    color: aliceblue;
+    border-radius: 5px;
+    width: 46%;
+    height: 230px;
+    display: flex;
+    column-gap: 100px;
+    margin: 20px;
+}
+.rec12{
     background-color: rgb(34, 40, 49);
     color: aliceblue;
     border-radius: 5px;
@@ -270,4 +279,30 @@
 }
 .afficher:hover{
     color: #FFBE33;
+}
+
+/* responsive home */
+@media only screen and (max-width:991px) {
+    #rectangle{
+        margin-bottom: 20px;
+        height: 600px;
+        width: 100%;
+        border: 2px solid red;
+    }
+    .rectangle1{    
+        border: 2px solid rgb(85, 0, 255);
+        /* display: grid; */
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-bottom: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .rec1{
+        width: 70%;
+    }
+    .rec12{
+        width: 70%;
+    }
 }
