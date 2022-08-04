@@ -198,3 +198,5 @@ function stopTimer(){
 function startTimer(){
     timer = setInterval(slideNext, 4000)
 }
+
+

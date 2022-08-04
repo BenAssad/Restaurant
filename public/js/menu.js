@@ -1,5 +1,3 @@
-// let grid = document.getElementById("grid1");
-// let image = document.getElementById("recim");
 
 // Zoom images
 const rec = document.getElementsByClassName("grid1");
@@ -19,4 +17,5 @@ for(let i = 0; i < rec.length; i++){
         img[i].style.width = "195px";
     });
 }
+
 

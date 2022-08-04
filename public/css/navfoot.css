@@ -8,6 +8,16 @@
 }
 
 /* nav-barre */
+/* #navres{
+    display: none;
+}
+.navres{
+    width: 100%;
+    list-style: none;
+    text-decoration: none;
+    background-color: rgb(34, 40, 49);
+    height: 500;
+} */
 #menu{
     background-color: rgb(34, 40, 49);
     width: 100%;
@@ -71,7 +81,10 @@
     background-color: #11100e;
     color: red;
 }
-
+#imenu{
+    color: aliceblue;
+    display: none;
+}
 
 /* footer */
 footer{
@@ -127,4 +140,37 @@ footer{
 }
 .ficon:hover{
     color: #E69C00;
+}
+
+/* Responsive du navbarre */
+
+@media only screen and (max-width:991px) {
+    /* nav-barre */
+  #imenu{
+    display: block;
+    margin-right: 20px;
+    margin-top: 35px;
+  }
+  #menu{
+    border: 2px solid white;
+    height: 500px;
+  }
+  .menu{
+    display: flex;
+    flex-direction: column;
+  }
+  .logo{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+  }
+
+  
 }
