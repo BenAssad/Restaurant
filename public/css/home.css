@@ -122,6 +122,7 @@
 
 /** grid **/
 #grid{
+    border: 2px solid red;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -285,13 +286,12 @@
 @media only screen and (max-width:991px) {
     #rectangle{
         margin-bottom: 20px;
-        height: 600px;
+        height: 530px;
         width: 100%;
         border: 2px solid red;
     }
     .rectangle1{    
         border: 2px solid rgb(85, 0, 255);
-        /* display: grid; */
         display: flex;
         flex-direction: column;
         width: 80%;
@@ -301,8 +301,19 @@
     }
     .rec1{
         width: 70%;
+        height: 200px;
     }
     .rec12{
         width: 70%;
+        height: 200px;
+    }
+
+    .grid1{
+        width: 43%;
+        height: 450px;
+        background-color: rgb(34, 40, 49);
+        border-radius: 20px;
+        color: aliceblue;
+        margin: 20px;
     }
 }

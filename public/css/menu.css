@@ -105,3 +105,15 @@ ul{
     justify-content: flex-end;
 }
 
+/* responsive menu */
+@media only screen and (max-width:991px){
+    .grid1{
+        width: 43%;
+        height: 450px;
+        background-color: rgb(34, 40, 49);
+        border-radius: 20px;
+        color: aliceblue;
+        margin: 20px;
+    }
+}
+

@@ -6,7 +6,7 @@ menu.addEventListener("click" , function(){
 
     if(menu.getAttribute("aria-expanded") == "false" )
     {
-
+        
         nav.style.height = "400px";
         menu.innerHTML = "<p>X</p>";
         menu.setAttribute("aria-expanded", "true");
