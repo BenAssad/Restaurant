@@ -309,6 +309,7 @@
     }
 
     .grid1{
+        transition: 3s;
         width: 43%;
         height: 450px;
         background-color: rgb(34, 40, 49);
