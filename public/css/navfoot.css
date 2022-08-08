@@ -176,6 +176,10 @@ footer{
     justify-content: space-around;
     height: 200px;
   }
-
-  
+  #menuri{
+    display: none;
+  }
+  .pro{
+    display: none;
+  }
 }

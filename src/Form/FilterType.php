@@ -20,7 +20,7 @@ class FilterType extends AbstractType
                 "choice_label" => "name",
                 "multiple" => true,
                 "expanded" => true,
-                "required" => false
+                "required" => false,
                 ])
                 ->add('recherche', TextType::class, [
                 "required" => false
