@@ -12,13 +12,14 @@
 <div class="example-wrapper">
      <div id="">
         <h1 class="h1">Notre Menu</h1>
-        <div id="ul">
-                {{ form_start(formfilter) }}
-                <ul>
+        <div>
+            {{ form_start(formfilter) }}
+                <ul id="ul">
                     <li>{{form_row(formfilter.categorie)}}</li>
                     {# <li>{{form_row(formfilter.recherche)}}</li> #}
+                <input type="submit" value="Recherche" class="btn">
                 </ul>
-                {{ form_end(formfilter) }}
+            {{ form_end(formfilter) }}
         </div>
     </div>
     <div id="gridmenu">

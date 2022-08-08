@@ -104,12 +104,17 @@ ul{
     display: flex;
     justify-content: flex-end;
 }
-/* .col-form-label{
-    
-} */
+#ul{
+    display: flex;
+}
+.col-form-label{
+    display: none;
+}
 #filter_categorie{
     border: 2px solid red;
     display: flex;
+    justify-content: space-around;
+    width: 400px;
 }
 
 
@@ -117,6 +122,16 @@ ul{
 @media only screen and (max-width:991px){
     .grid1{
         width: 43%;
+        height: 450px;
+        background-color: rgb(34, 40, 49);
+        border-radius: 20px;
+        color: aliceblue;
+        margin: 20px;
+    }
+}
+@media only screen and (max-width:650px){
+    .grid1{
+        width: 80%;
         height: 450px;
         background-color: rgb(34, 40, 49);
         border-radius: 20px;
