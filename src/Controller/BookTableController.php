@@ -22,7 +22,9 @@ class BookTableController extends AbstractController
         $form = $this->createForm(BookTableType::class, $table);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) 
+        {
+            $table->setDateAt(new \DateTimeImmutable('now'));
             
             $manager->persist($table);
             $manager->flush();

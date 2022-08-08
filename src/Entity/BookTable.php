@@ -37,6 +37,14 @@ class BookTable
      */
     private $howManyPersons;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $dateAt;
+
+    
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -89,4 +97,21 @@ class BookTable
 
         return $this;
     }
+
+    public function getDateAt(): ?\DateTimeInterface
+    {
+        return $this->dateAt;
+    }
+
+    public function setDateAt(\DateTimeInterface $dateAt): self
+    {
+        $this->dateAt = $dateAt;
+
+        return $this;
+    }
+
+
+
+
+
 }

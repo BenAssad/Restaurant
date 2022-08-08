@@ -9,6 +9,7 @@
         <p>Email: {{book.email}}</p>
         <p>Téléphone: {{book.phoneNumber}}</p>
         <p>Nombre de Personnes: {{book.howManyPersons}}</p>
+        <h5>Date: {{book.dateAt|date()}}</h5>
     {% endfor %}
 
 {% endblock %}
