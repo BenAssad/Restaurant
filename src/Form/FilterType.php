@@ -22,9 +22,9 @@ class FilterType extends AbstractType
                 "expanded" => true,
                 "required" => false,
                 ])
-                ->add('recherche', TextType::class, [
-                "required" => false
-            ])
+            //     ->add('recherche', TextType::class, [
+            //     "required" => false
+            // ])
         ;
     }
 
