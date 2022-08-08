@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+    {% for book in books %}
+        <h3>Nom: {{book.name}}</h3>
+        <p>Email: {{book.email}}</p>
+        <p>Téléphone: {{book.phoneNumber}}</p>
+        <p>Nombre de Personnes: {{book.howManyPersons}}</p>
+    {% endfor %}
+
+{% endblock %}

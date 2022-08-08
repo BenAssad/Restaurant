@@ -21,6 +21,7 @@
                     {% if app.user %}
                         {% if is_granted('ROLE_ADMIN') %}
                             <a href="{{ path('app_admin_produit_index') }}" class="btnd">Back Office</a>
+                            <a href="{{ path('app_admin_table') }}" class="btnd">Reservation</a>
                         {% endif %}
                             <a class="btnd" href="{{ path('app_logout') }}">Se Déconnecter</a>
                         {% if app.user.avatar %}

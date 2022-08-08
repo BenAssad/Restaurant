@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\BookTable;
 use App\Form\BookTableType;
+use App\Repository\BookTableRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -29,6 +30,17 @@ class BookTableController extends AbstractController
 
         return $this->render('book_table/booktable.html.twig', [
             'booktable' => $form->createView(),
+        ]);
+    }
+    /**
+     * @Route("/admin/book/table", name="app_admin_table")
+     */
+    public function AdminTable(BookTableRepository $bookrepo): Response
+    {
+        $book = $bookrepo->findAll();
+
+        return $this->render('book_table/adminbook.html.twig', [
+            'books' => $book
         ]);
     }
 }
