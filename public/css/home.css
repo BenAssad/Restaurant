@@ -67,7 +67,6 @@
 .rectangle1{
     width: 80%;
     display: flex;
-    /* border: 2px solid gold; */
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -94,7 +93,6 @@
     margin: 20px;
 }
 .rec2{
-    /* border: 3px solid red; */
     display: flex;
     align-items: center;
     width: 70%;
@@ -111,7 +109,6 @@
     border-radius: 50%;
     width: 95%;
     height: 95%;
-    /* padding: 0; */
     transition: 0.5s;
 }
 
@@ -122,7 +119,6 @@
 
 /** grid **/
 #grid{
-    border: 2px solid red;
     width: 100%;
     display: flex;
     justify-content: center;

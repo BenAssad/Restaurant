@@ -14,9 +14,25 @@ window.onload = () => {
     // On calcule la largeur visible du diaporama
     slideWidth = diapo.getBoundingClientRect().width
 
+    //***********************/
+    const comment1 = document.querySelector(".comment1")
+
+    commentmessage = document.querySelector(".commentmessage")
+
+    slide = Array.from(commentmessage.children)
+
+    
+    slidetimes = comment1.getBoundingClientRect().width
+
+    
+    // let next1 = document.querySelector("#btn-left")
+    // let prev1 = document.querySelector("#btn-rght")
+    //**********************/
+
     // On récupère les deux flèches
     let next = document.querySelector("#nav-droite")
     let prev = document.querySelector("#nav-gauche")
+
 
     // On met en place les écouteurs d'évènements sur les flèches
     next.addEventListener("click", slideNext)
@@ -24,6 +40,10 @@ window.onload = () => {
 
     // Automatiser le diaporama
     timer = setInterval(slideNext, 4000)
+
+    // next1.addEventListener("click", slideNext)
+    // prev1.addEventListener("click", slidePrev)
+
 
     // Gérer le survol de la souris
     diapo.addEventListener("mouseover", stopTimer)
@@ -51,6 +71,7 @@ function slideNext(){
     // On calcule la valeur du décalage
     let decal = -slideWidth * compteur
     elements.style.transform = `translateX(${decal}px)`
+    commentmessage.style.transform = `translateX(${decal}px)`
 }
 
 /**
@@ -68,6 +89,7 @@ function slidePrev(){
     // On calcule la valeur du décalage
     let decal = -slideWidth * compteur
     elements.style.transform = `translateX(${decal}px)`
+    comment1.style.transform = `translateX(${decal}px)`
 }
 
 /**
@@ -131,75 +153,79 @@ for(let i = 0; i < rec1.length; i++){
 
 // Slider
 
-let compteurs = 0 
-let timers, commentmessage, slide, slidetimes
+// let compteurs = 0 
+// let timers, commentmessage, slide, slidetimes
 
-window.onload = () => {
+// window.onload = () => {
     
-    const comment1 = document.querySelector(".comment1")
+//     const comment1 = document.querySelector(".comment1")
 
-    commentmessage = document.querySelector(".commentmessage")
+//     commentmessage = document.querySelector(".commentmessage")
 
-    slide = Array.from(commentmessage.children)
-
-    
-    slidetimes = comment1.getBoundingClientRect().width
+//     slide = Array.from(commentmessage.children)
 
     
-    let next = document.querySelector("#btn-left")
-    let prev = document.querySelector("#btn-rght")
+//     slidetimes = comment1.getBoundingClientRect().width
 
     
-    next.addEventListener("click", slideNext)
-    prev.addEventListener("click", slidePrev)
+//     let next = document.querySelector("#btn-left")
+//     let prev = document.querySelector("#btn-rght")
 
     
-    timer = setInterval(slideNext, 4000)
+//     next.addEventListener("click", slideNext)
+//     prev.addEventListener("click", slidePrev)
 
     
-    comment1.addEventListener("mouseover", stopTimer)
-    comment1.addEventListener("mouseout", startTimer)
+//     timer = setInterval(slideNext, 4000)
 
     
-    window.addEventListener("resize", () => {
-        slidetimes = comment1.getBoundingClientRect().width
-        slideNext()
-    })
-}
-
-
-function slideNext(){
-    
-    compteur++
+//     comment1.addEventListener("mouseover", stopTimer)
+//     comment1.addEventListener("mouseout", startTimer)
 
     
-    if(compteur == slide.length){
-        compteur = 0
-    }
+//     window.addEventListener("resize", () => {
+//         slidetimes = comment1.getBoundingClientRect().width
+//         slideNext()
+//     })
+// }
+
+
+// function slideNext(){
+    
+//     compteur++
 
     
-    let decal = -slidetimes * compteurs
-    commentmessage.style.transform = `translateX(${decal}px)`
-}
+//     if(compteur == slide.length){
+//         compteur = 0
+//     }
 
-function slidePrev(){
+    
+//     let decal = -slidetimes * compteurs
+//     commentmessage.style.transform = `translateX(${decal}px)`
+// }
 
-    compteur--
-    if(compteur < 0){
-        compteur = slide.length - 1
-    }
+// function slidePrev(){
 
-    let decal = -slidetimes * compteur
-    commentmessage.style.transform = `translateX(${decal}px)`
-}
+//     compteur--
+//     if(compteur < 0){
+//         compteur = slide.length - 1
+//     }
 
-function stopTimer(){
-    clearInterval(timer)
-}
+//     let decal = -slidetimes * compteur
+//     commentmessage.style.transform = `translateX(${decal}px)`
+// }
+
+// function stopTimer(){
+//     clearInterval(timer)
+// }
 
 
-function startTimer(){
-    timer = setInterval(slideNext, 4000)
-}
+// function startTimer(){
+//     timer = setInterval(slideNext, 4000)
+// }
+
+
+
+
 
 
