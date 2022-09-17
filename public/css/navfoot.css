@@ -183,3 +183,17 @@ footer{
     display: none;
   }
 }
+/* Responsive du footer */
+@media only screen and (max-width:400px)
+{
+    footer{
+        height: 1390px;
+    }
+    #footer{
+        display: flex;
+        flex-direction: column;
+    }
+    #opensans{
+        margin-top: 250px;
+    }
+}
