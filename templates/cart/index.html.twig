@@ -9,6 +9,7 @@
 
 
 {% block body %}
+<div class="bd">
     <div class="panier">
         <div class="vpa">
             <div class="vpanier">
@@ -23,9 +24,9 @@
                         <div class="global">
                             <div class="">
                                 {% if element.produit.image %} 
-                                    <img src="{{ asset(  'images/produit/' ~ element.produit.image    ) }}"  class="itemImg">
+                                    <img src="{{ asset(  'images/produit/' ~ element.produit.image    ) }}"  class="imgpnr">
                                 {% else %}
-                                    <img src="{{ asset(  'images/home.jpg'   ) }}" class="itemImg">
+                                    <img src="{{ asset(  'images/home.jpg'   ) }}" class="imgpnr">
                                 {% endif %}
                             </div>
 
@@ -58,8 +59,11 @@
                 {% endfor %}
             </div>
 
-            <div>
-                <p>{{ total }} €</p>
+            <div class="tota">
+                <h2>Total</h2>
+                <div class="total">
+                    <p>{{ total }} €</p>
+                </div>
             </div>
         </div>
 
@@ -70,4 +74,5 @@
             </div>
         </div>
     </div>
+</div>
 {% endblock %}
