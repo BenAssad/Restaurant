@@ -4,15 +4,32 @@
     box-sizing: border-box;
 }
 .panier{
-    border: 2px solid blue;
-    height: 120vh;
+    /* border: 2px solid blue; */
+    /* height: 120vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.divart{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.bloblart{
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .blobl{
     border: 2px solid goldenrod;
-    width: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .global{
     border: 5px solid red;
@@ -21,7 +38,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 40%;
+    width: 60%;
     margin-top: 50px;
 }
 .vpa{
@@ -69,4 +86,18 @@
 .delete{
     /* border: 2px solid greenyellow; */
     height: 150px;
+}
+.vider{
+    background-color: #E69C00;
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 190px;
+}
+.viderpa{
+    color:aliceblue;
+    text-decoration: none;
 }

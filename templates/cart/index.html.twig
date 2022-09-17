@@ -15,47 +15,59 @@
     	    <h2>Votre Panier</h2>
             </div>
         </div>
-        {% for element in datacart %}
-        <div class="blobl">
-            <div class="global">
-                <div class="">
-                    {% if element.produit.image %} 
-                        <img src="{{ asset(  'images/produit/' ~ element.produit.image    ) }}"  class="itemImg">
-                    {% else %}
-                        <img src="{{ asset(  'images/home.jpg'   ) }}" class="itemImg">
-                    {% endif %}
-                </div>
 
-                <div class="desc">
-                    <p>{{ element.produit.titre }}</p>
-                    <p>{{ element.produit.description }}</p>
-                    <p>{{ element.produit.prix }}€</p>
-                </div>
+        <div class="divart">
+            <div class="bloblart">
+                {% for element in datacart %}
+                    <div class="blobl">
+                        <div class="global">
+                            <div class="">
+                                {% if element.produit.image %} 
+                                    <img src="{{ asset(  'images/produit/' ~ element.produit.image    ) }}"  class="itemImg">
+                                {% else %}
+                                    <img src="{{ asset(  'images/home.jpg'   ) }}" class="itemImg">
+                                {% endif %}
+                            </div>
 
-                <div class="plusminus">
-                    <div class="plus">
-                        <button class="minus"><a href="{{path("remove", {id: element.produit.id})}}"> <i data-feather="minus" class="i"></i></a></button> 
-                        {{ element.quantity }}
-                        <button class="minus"><a href="{{path("app_add_to_cart", {id: element.produit.id})}}"> <i data-feather="plus" class="i"></i></a></button> 
+                            <div class="desc">
+                                <p>{{ element.produit.titre }}</p>
+                                <p>{{ element.produit.description }}</p>
+                                <p>{{ element.produit.prix }}€</p>
+                            </div>
+
+                            <div class="plusminus">
+                                <div class="plus">
+                                    <button class="minus"><a href="{{path("remove", {id: element.produit.id})}}"> <i data-feather="minus" class="i"></i></a></button> 
+                                    {{ element.quantity }}
+                                    <button class="minus"><a href="{{path("app_add_to_cart", {id: element.produit.id})}}"> <i data-feather="plus" class="i"></i></a></button> 
+                                </div>
+                                <div class="delete">
+                                    <a href="{{path("delete", {id: element.produit.id})}}"><i data-feather="trash-2" class="i"></i></a>
+                                </div>
+                            </div>
+                                
+
+                        </div>
+                            {# <div class="total">
+                                <td class="text-end">{{ element.quantity * element.produit.prix }} €</td>
+                            </div> #}
                     </div>
-                    <div class="delete">
-                        <a href="{{path("delete", {id: element.produit.id})}}"><i data-feather="trash-2" class="i"></i></a>
-                    </div>
-                </div>
-                    
 
+                {% else %}
+                    <p>Votre panier est vide</p> 
+                {% endfor %}
             </div>
-                {# <div class="total">
-                    <td class="text-end">{{ element.quantity * element.produit.prix }} €</td>
-                </div> #}
+
+            <div>
+                <p>{{ total }} €</p>
+            </div>
         </div>
-        {% else %}
-            <p>Votre panier est vide</p> 
-        {% endfor %}
 
         <div>
-            <p>{{ total }} €</p>
-            <a href="{{path("delete_all")}}">Vider le panier</a>
+            {# <p>{{ total }} €</p> #}
+            <div class="vider">
+                <a  class="viderpa"  href="{{path("delete_all")}}">Vider le panier</a>
+            </div>
         </div>
     </div>
 {% endblock %}
