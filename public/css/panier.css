@@ -18,10 +18,9 @@
 }
 
 .divart{
-    border: 5px solid black;
-    width: 100%;
+    /* border: 5px solid black; */
+    width: 90%;
     display: flex;
-    justify-content: center;
 }
 .bloblart{
     width: 80%;
@@ -90,7 +89,9 @@
     align-items: center;
     height: 20px;
 }
-
+.id{
+    color: red;
+}
 .imgpnr{
     border-radius: 50%;
     width: 175px;
@@ -127,7 +128,33 @@
 }
 /* total */
 .tota{
-    border: 2px solid blue;
-    width: 20%;
-    margin-left: -230px;
+    width: 30%;
+    height: 250px;
+    margin-top: 40px;
+    margin-left: -200px;
+    background-color: rgb(55, 65, 66);
+    color: aliceblue;
+}
+.totah2{
+    margin: 20px;
+}
+.total{
+    text-align: center;
+    font-size: 50px;
+}
+.acha{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.acheter{
+    background-color: #E69C00;
+    border-radius: 30px;
+    width: 30%;
+    height: 50px;
+    color: aliceblue;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

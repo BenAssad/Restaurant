@@ -43,7 +43,7 @@
                                     <button class="minus"><a href="{{path("app_add_to_cart", {id: element.produit.id})}}"> <i data-feather="plus" class="i"></i></a></button> 
                                 </div>
                                 <div class="delete">
-                                    <a href="{{path("delete", {id: element.produit.id})}}"><i data-feather="trash-2" class="i"></i></a>
+                                    <a href="{{path("delete", {id: element.produit.id})}}"><i data-feather="trash-2" class="id"></i></a>
                                 </div>
                             </div>
                                 
@@ -60,9 +60,14 @@
             </div>
 
             <div class="tota">
-                <h2>Total</h2>
+                <h2 class="totah2">Total :</h2>
                 <div class="total">
                     <p>{{ total }} €</p>
+                </div>
+                <div class="acha">
+                    {# <div class="achet"> #}
+                        <a class="acheter" href="#">Acheter</a>
+                    {# </div> #}
                 </div>
             </div>
         </div>
