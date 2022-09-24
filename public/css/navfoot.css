@@ -186,6 +186,16 @@ footer{
 /* Responsive du footer */
 @media only screen and (max-width:400px)
 {
+    #menu{
+        width: 100%;
+        height: 70px;
+    }
+    #imenu{
+        margin-top: 15px;
+    }
+    .log{
+        height: 50px;
+     }
     footer{
         height: 1390px;
     }
