@@ -281,29 +281,37 @@
 /* responsive home */
 @media only screen and (max-width:991px) {
     #rectangle{
-        margin-bottom: 20px;
-        height: 530px;
-        width: 100%;
         border: 2px solid red;
+        width: 100%;
     }
     .rectangle1{    
         border: 2px solid rgb(85, 0, 255);
         display: flex;
         flex-direction: column;
         width: 80%;
-        margin-bottom: 20px;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
     }
     .rec1{
-        width: 70%;
-        height: 200px;
+        border: 2px solid rgb(0, 0, 0);
+        width: 100%;
+    }
+    .rec2{
+        border: 3px solid yellow;
+        display: flex;
+        flex-direction: column;
+        height: 300px;
     }
     .rec12{
+        border: 2px solid red;
         width: 70%;
         height: 200px;
     }
 
+    .recimg{
+        border-radius: 50%;
+        /* width: 50px; */
+        transition: 0.5s;
+    }
+    /* responsive menu */
     .grid1{
         transition: 3s;
         width: 43%;
@@ -312,5 +320,16 @@
         border-radius: 20px;
         color: aliceblue;
         margin: 20px;
+    }
+    .grid1{
+        width: 80%;
+        height: 450px;
+        background-color: rgb(34, 40, 49);
+        border-radius: 20px;
+        color: aliceblue;
+        margin: 20px;
+    }
+    .comment{
+        display: none;
     }
 }
