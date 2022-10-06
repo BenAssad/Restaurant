@@ -118,9 +118,7 @@ ul{
     .grid1{
         width: 43%;
         height: 450px;
-        background-color: rgb(34, 40, 49);
         border-radius: 20px;
-        color: aliceblue;
         margin: 20px;
     }
 }
@@ -128,10 +126,17 @@ ul{
     .grid1{
         width: 80%;
         height: 450px;
-        background-color: rgb(34, 40, 49);
         border-radius: 20px;
-        color: aliceblue;
         margin: 20px;
+    }
+    #ul{
+        display: flex;
+        flex-direction: column;
+    }
+    #filter_categorie{
+        display: flex;
+        justify-content: space-around;
+        width: 300px;
     }
 }
 
