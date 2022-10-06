@@ -138,5 +138,9 @@ ul{
         justify-content: space-around;
         width: 300px;
     }
+    .btn{
+        height: 45px;
+        width: 100px;
+    }
 }
 
