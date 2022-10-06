@@ -33,7 +33,6 @@
 .tablebook{
     display: flex;
     width: 70%;
-    height: 700px;
     justify-content: space-around;
     align-items: center;
 
@@ -48,3 +47,20 @@ iframe{
     border-radius: 20px;
 }
 
+@media only screen and (max-width:650px) {
+    .book{
+        width: 100%;
+    }
+    .tablebook{
+        display: flex;
+        flex-direction: column;
+    }
+    input{
+        height: 30px;
+    }
+    iframe{
+        /* display: none; */
+        width: 350px;
+        height: 300px;
+    }
+}
