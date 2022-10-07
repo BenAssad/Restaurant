@@ -114,17 +114,10 @@ ul{
 
 
 /* responsive menu */
-@media only screen and (max-width:991px){
-    .grid1{
-        width: 43%;
-        height: 450px;
-        border-radius: 20px;
-        margin: 20px;
-    }
-}
+
 @media only screen and (max-width:650px){
     .grid1{
-        width: 80%;
+        width: 90%;
         height: 450px;
         border-radius: 20px;
         margin: 20px;
@@ -140,7 +133,8 @@ ul{
     }
     .btn{
         height: 45px;
-        width: 100px;
+        width: 150px;
+        margin-top: 10px;
     }
 }
 

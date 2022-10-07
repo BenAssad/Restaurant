@@ -281,56 +281,61 @@
 /* responsive home */
 @media only screen and (max-width:991px) {
     #rectangle{
-        border: 2px solid red;
         width: 100%;
-        height: 1200px;
-    }
-    .rectangle1{    
-        border: 2px solid rgb(85, 0, 255);
-        display: flex;
-        flex-direction: column;
-        width: 80%;
         height: 1000px;
     }
-    .rec1{
-        border: 2px solid rgb(0, 0, 0);
-        width: 100%;
-        height: 500px;
-    }
-    .rec2{
-        border: 3px solid yellow;
+    .rectangle1{
         display: flex;
         flex-direction: column;
+        width: 100%;
+        height: 1000px;
+    }
+    .rec2{
+        display: flex;
+        flex-direction: column;
+        margin: 50px;
         height: 300px;
     }
+    .rec1{
+        width: 360px;
+        height: 420px;
+    }
     .rec12{
-        border: 2px solid red;
-        width: 70%;
-        height: 200px;
+        width: 360px;
+        height: 420px;
     }
 
     .recimg{
         border-radius: 50%;
-        /* width: 50px; */
         transition: 0.5s;
     }
     /* responsive menu */
     .grid1{
-        transition: 3s;
-        width: 43%;
+        width: 90%;
         height: 450px;
         background-color: rgb(34, 40, 49);
         border-radius: 20px;
         color: aliceblue;
         margin: 20px;
     }
-    .grid1{
-        width: 80%;
-        height: 450px;
-        background-color: rgb(34, 40, 49);
-        border-radius: 20px;
-        color: aliceblue;
-        margin: 20px;
+    .btn{
+        width: 150px;
+        height: 50px;
+        border-radius: 50px;
+        margin-top: -10px;
+        font-size: 20px;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .textfont{
+        font-size: 25px;
+    }
+    .button{
+        display: none;
     }
     .comment{
         display: none;
