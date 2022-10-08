@@ -16,7 +16,7 @@ menu.addEventListener("click" , function(){
     }else{
         menuri.style.display = "none";
         pro.style.display = "none";
-        nav.style.height = "100px";
+        nav.style.height = "70px";
         // menu.innerHTML = <i data-feather="menu"></i>;
         menu.setAttribute("aria-expanded", "false");
 
