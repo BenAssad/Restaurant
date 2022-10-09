@@ -59,8 +59,14 @@ iframe{
         height: 30px;
     }
     iframe{
-        /* display: none; */
         width: 350px;
         height: 300px;
+        margin: 20px;
     }
+    #book_table_Envoyer{
+        margin: 20px;
+        height: 50px;
+        width: 100px;
+    }
+    
 }

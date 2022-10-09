@@ -4,17 +4,14 @@
     box-sizing: border-box;
 }
 .profil{
-    height: 700px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .prof{
-    border: 2px solid yellow;
     background-color: rgb(34, 40, 49);
     color: aliceblue;
-    height: 599px;
+    margin: 20px;
     width: 40%;
     border-radius: 20px;
 }
@@ -40,9 +37,6 @@ li{
     justify-content: center;
     align-items: center;
 }
-.user{
-
-}
 .changeprofile{
     display: flex;
     justify-content: center;
@@ -51,4 +45,33 @@ li{
 .adress{
     display: flex;
     justify-content: space-around;
+}
+@media only screen and (max-width:500px) {
+    .profil{
+        width: 100%;
+    }
+    .prof{
+        width: 90%;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .adress{
+        display: flex;
+        flex-direction: column;
+        margin-top: -20px;
+    }
+    .imgprofile{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    .btn{
+        width: 100px;
+        height: 100px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
