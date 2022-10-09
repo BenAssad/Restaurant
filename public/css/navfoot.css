@@ -85,6 +85,12 @@
     color: aliceblue;
     display: none;
 }
+#bar3{
+    display: none;
+}
+#x{
+    display: none;
+}
 
 /* footer */
 footer{
@@ -142,6 +148,7 @@ footer{
     color: #E69C00;
 }
 
+
 /* Responsive du navbarre */
 
 @media only screen and (max-width:991px) {
@@ -150,13 +157,8 @@ footer{
     display: block;
     margin-right: 20px;
     margin-top: 35px;
-    border: 2px dashed red;
-  }
-  #X{
-    color: aliceblue;
   }
   #menu{
-    border: 2px solid white;
     height:100px;
     
   }
@@ -208,5 +210,8 @@ footer{
     }
     .btnd{
         display: none;
+    }
+    #bar3{
+        display: block;
     }
 }
