@@ -158,3 +158,17 @@
     justify-content: center;
     align-items: center;
 }
+/* Responsive */
+
+@media only screen and (max-width:500px){
+    .bd{
+        border: 2px solid red;
+    }
+    .panier{
+        border: 2px solid green;
+    }
+    .vpanier{
+        width: 50%;
+        height: 50px;
+    }
+}
