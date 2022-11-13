@@ -107,3 +107,45 @@
 .oub:hover{
     color: #E69C00;
 }
+@media only screen and (max-width:650px) {
+    /* page d'inscription */
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1000px;
+}
+.registre{
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gray;
+    background-color: rgb(34, 40, 49);
+    color: aliceblue;
+    width: 77%;
+}
+
+.f2{
+    width: 90%;
+}
+.f1{
+    /* display: flex;
+    justify-content: space-around; */
+    width: 90%;
+}
+.ins{
+    margin-bottom: 20px;
+}
+.date{
+    width: 90%;
+}
+.accepter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+}
