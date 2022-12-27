@@ -9,7 +9,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* height: 700px; */
 }
 .registre{
     border-radius: 20px;
@@ -118,7 +117,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* height: 1000px; */
 }
 .registre{
     border-radius: 20px;
@@ -162,5 +160,23 @@
 .name{
     margin-left: 20px;
 }
-
+/* page de connection */
+.connection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.connecter{
+    background-color: rgb(34, 40, 49);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: aliceblue;
+    width: 90%;
+    border-radius: 30px;
+}
+.connecte{
+    width: 80%;
+}
 }
