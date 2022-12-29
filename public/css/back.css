@@ -52,7 +52,6 @@
 }
 /* formulaire de produit */
 .produit{
-    height: 750px;
     display: flex;
     flex-direction: column;
     justify-content: center;

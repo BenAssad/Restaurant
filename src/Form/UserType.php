@@ -20,19 +20,19 @@ class UserType extends AbstractType
         if ($options['civil']) {
             $builder
             ->add('email', EmailType::class, [
-
+                "required" => false
             ])
             ->add('name', TextType::class, [
-
+                "required" => false
             ])
             ->add('lastname', TextType::class, [
-
+                "required" => false
             ])
             ->add('birthAt', DateType::class, [
-
+                "required" => false
             ])
             ->add('phoneNumber', NumberType::class, [
-
+                "required" => false
             ])
             ;
         }

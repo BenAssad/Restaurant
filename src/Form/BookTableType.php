@@ -17,10 +17,12 @@ class BookTableType extends AbstractType
     {
         $builder
             ->add('name', TextType::class, [
-
+                "required" => false,
+                'label' => 'Nom'
             ])
             ->add('phoneNumber', TextType::class, [
-
+                "required" => false,
+                'label' => 'Téléphone'
             ])
             ->add('email', EmailType::class, [
                 
