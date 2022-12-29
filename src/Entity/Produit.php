@@ -7,6 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 use App\Repository\ProduitRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ProduitRepository::class)
@@ -22,21 +23,25 @@ class Produit
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Veuillez rentrer le titre")
      */
     private $titre;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank(message="Veuillez rentrer la description")
      */
     private $description;
 
     /**
      * @ORM\Column(type="float")
+     * @Assert\NotBlank(message="Veuillez rentrer le prix")
      */
     private $prix;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Veuillez rentrer l'image")
      */
     private $image;
 
@@ -47,6 +52,7 @@ class Produit
 
     /**
      * @ORM\ManyToOne(targetEntity=Categorie::class, inversedBy="produits")
+     * @Assert\NotBlank(message="Veuillez sélectionné la catégorie")
      */
     private $categorie;
 

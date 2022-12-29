@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\BookTableRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=BookTableRepository::class)
@@ -19,6 +20,10 @@ class BookTable
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Regex(
+     * pattern="/^[0-9]+$/i", 
+     * match=false,
+     * message="Vôtre Nom ne peut pas contenir des chiffres ni de caratére")
      */
     private $name;
 
